@@ -24,6 +24,9 @@ import tyreImage from "@assets/generated_images/close_up_of_car_tyre_tread.png";
 import vanInterior from "@assets/generated_images/mobile_tyre_fitting_van_interior.png";
 import mechanicCustomer from "@assets/stock_images/mechanic_shaking_han_9a974962.jpg";
 import tyreTread from "@assets/stock_images/modern_tyre_tread_cl_04a1f108.jpg";
+import wheelBalancing from "@assets/generated_images/digital_wheel_balancer_screen.png";
+import fuelImage from "@assets/generated_images/emergency_fuel_canister_pour.png";
+import batteryImage from "@assets/generated_images/car_battery_installation_close_up.png";
 
 export default function Home() {
   const container = {
@@ -143,7 +146,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Mobile Tyre Fitting"
                 description="We come to your home or workplace to fit new tyres. No waiting in garages, we work around your schedule."
@@ -151,7 +154,7 @@ export default function Home() {
                 image={vanInterior}
               />
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Emergency Call-Out"
                 description="Stranded? Our 24/7 emergency team aims to reach you within 30-60 minutes to get you back on the road."
@@ -159,7 +162,7 @@ export default function Home() {
                 image={tyreTread}
               />
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Puncture Repair"
                 description="Professional puncture repairs carried out on-site to British Standards (BS AU 159). Save money on new tyres."
@@ -167,25 +170,28 @@ export default function Home() {
                 image={tyreImage}
               />
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Wheel Balancing"
                 description="State-of-the-art mobile balancing equipment to ensure smooth driving and prevent premature tyre wear."
                 icon={Settings}
+                image={wheelBalancing}
               />
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Battery Replacement"
                 description="Car won't start? We can supply and fit a new battery at your location for all vehicle makes and models."
                 icon={Battery}
+                image={batteryImage}
               />
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className="h-full">
               <ServiceCard 
                 title="Emergency Fuel"
                 description="Run out of fuel? We can deliver petrol or diesel to get you to the nearest station."
                 icon={Fuel}
+                image={fuelImage}
               />
             </motion.div>
           </motion.div>
@@ -202,7 +208,7 @@ export default function Home() {
                  Queensway Mobile Tyres is London's leading mobile tyre fitting service. We understand that your time is valuable, which is why we bring the tyre depot to you. Whether you need a <strong>same-day tyre replacement at home</strong>, a quick <strong>puncture repair at work</strong>, or urgent <strong>24/7 emergency roadside assistance</strong>, our expert technicians are just a phone call away.
                </p>
                <p className="text-gray-400 text-lg leading-relaxed">
-                 Our fleet of vans is equipped with the latest tyre changing and balancing technology, allowing us to handle everything from standard cars to 4x4s, vans, and high-performance vehicles. We stock a huge range of tyres including premium brands like Michelin, Continental, and Pirelli, as well as quality budget options.
+                 Our fleet of vans is equipped with the latest tyre changing and balancing machinery, allowing us to handle everything from standard cars to 4x4s, vans, and high-performance vehicles. We stock a huge range of tyres including premium brands like Michelin, Continental, and Pirelli, as well as quality budget options.
                </p>
                <div className="grid grid-cols-2 gap-4 mt-6">
                  <div className="flex items-center gap-3 text-white font-medium">

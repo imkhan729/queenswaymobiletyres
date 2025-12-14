@@ -12,6 +12,7 @@ import {
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,25 +47,42 @@ export function Navbar() {
             <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Home</a>
           </Link>
           
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider outline-none">
-              Services <ChevronDown className="ml-1 w-4 h-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-secondary border-white/10 text-gray-200">
-              <DropdownMenuItem>
-                <Link href="/mobile-tyre-fitting"><a className="w-full">Mobile Tyre Fitting</a></Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/emergency-call-out"><a className="w-full">Emergency Call Out</a></Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/puncture-repair"><a className="w-full">Puncture Repair</a></Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/battery-replacement"><a className="w-full">Battery Replacement</a></Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div 
+            className="relative group"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button 
+              className="flex items-center text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider outline-none py-2"
+            >
+              Services <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            <div className={`absolute top-full left-0 w-64 pt-2 transition-all duration-200 origin-top ${isServicesOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}`}>
+              <div className="bg-secondary/95 backdrop-blur-md border border-white/10 rounded-md shadow-xl overflow-hidden p-1">
+                <Link href="/mobile-tyre-fitting">
+                  <a className="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 hover:text-primary transition-colors rounded-sm uppercase tracking-wide">
+                    Mobile Tyre Fitting
+                  </a>
+                </Link>
+                <Link href="/emergency-call-out">
+                  <a className="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 hover:text-primary transition-colors rounded-sm uppercase tracking-wide">
+                    Emergency Call Out
+                  </a>
+                </Link>
+                <Link href="/puncture-repair">
+                  <a className="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 hover:text-primary transition-colors rounded-sm uppercase tracking-wide">
+                    Puncture Repair
+                  </a>
+                </Link>
+                <Link href="/battery-replacement">
+                  <a className="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 hover:text-primary transition-colors rounded-sm uppercase tracking-wide">
+                    Battery Replacement
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
 
           <Link href="/locations">
             <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Locations</a>
