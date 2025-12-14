@@ -11,6 +11,10 @@ import PunctureRepair from "@/pages/services/puncture-repair";
 import BatteryReplacement from "@/pages/services/battery-replacement";
 import Locations from "@/pages/locations";
 import Contact from "@/pages/contact";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
+import SitemapPage from "@/pages/sitemap-page";
+import About from "@/pages/about";
 
 function Router() {
   return (
@@ -22,6 +26,10 @@ function Router() {
       <Route path="/battery-replacement" component={BatteryReplacement} />
       <Route path="/locations" component={Locations} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy" component={PrivacyPolicy} />
+      <Route path="/terms" component={TermsOfService} />
+      <Route path="/sitemap" component={SitemapPage} />
+      <Route path="/about" component={About} />
       <Route component={NotFound} />
     </Switch>
   );

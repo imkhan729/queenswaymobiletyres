@@ -90,7 +90,7 @@ export function Footer() {
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="/privacy"><a className="hover:text-primary transition-colors">Privacy Policy</a></Link>
             <Link href="/terms"><a className="hover:text-primary transition-colors">Terms of Service</a></Link>
-            <Link href="/sitemap.xml"><a className="hover:text-primary transition-colors">Sitemap</a></Link>
+            <Link href="/sitemap"><a className="hover:text-primary transition-colors">Sitemap</a></Link>
           </div>
         </div>
       </div>

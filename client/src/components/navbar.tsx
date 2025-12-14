@@ -69,14 +69,18 @@ export function Navbar() {
           <Link href="/locations">
             <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Locations</a>
           </Link>
-          <a href="/#contact" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Contact</a>
+          <Link href="/contact">
+            <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Contact</a>
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="default" className="bg-primary hover:bg-primary/90 text-black font-bold uppercase tracking-wide">
-            <Phone className="w-4 h-4 mr-2" />
-            07988 018865
-          </Button>
+          <a href="tel:07988018865">
+            <Button variant="default" className="bg-primary hover:bg-primary/90 text-black font-bold uppercase tracking-wide">
+              <Phone className="w-4 h-4 mr-2" />
+              07988 018865
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Nav */}
@@ -98,9 +102,12 @@ export function Navbar() {
                   <Link href="/battery-replacement"><a className="text-lg text-gray-300 hover:text-primary">Battery Replacement</a></Link>
                 </div>
                 <Link href="/locations"><a className="text-xl font-heading font-bold text-white hover:text-primary">Locations</a></Link>
-                <Button className="w-full bg-primary text-black font-bold uppercase mt-4">
-                  Call Now
-                </Button>
+                <Link href="/contact"><a className="text-xl font-heading font-bold text-white hover:text-primary">Contact</a></Link>
+                <a href="tel:07988018865">
+                  <Button className="w-full bg-primary text-black font-bold uppercase mt-4">
+                    Call Now
+                  </Button>
+                </a>
               </div>
             </SheetContent>
           </Sheet>
