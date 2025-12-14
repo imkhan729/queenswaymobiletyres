@@ -1,8 +1,14 @@
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, ShoppingCart } from "lucide-react";
+import { Menu, X, Phone, ShoppingCart, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,14 +20,6 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/#services" },
-    { name: "Emergency", href: "/#emergency" },
-    { name: "Coverage", href: "/#coverage" },
-    { name: "Contact", href: "/#contact" },
-  ];
 
   return (
     <nav
@@ -44,15 +42,34 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider"
-            >
-              {link.name}
-            </a>
-          ))}
+          <Link href="/">
+            <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Home</a>
+          </Link>
+          
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider outline-none">
+              Services <ChevronDown className="ml-1 w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-secondary border-white/10 text-gray-200">
+              <DropdownMenuItem>
+                <Link href="/mobile-tyre-fitting"><a className="w-full">Mobile Tyre Fitting</a></Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/emergency-call-out"><a className="w-full">Emergency Call Out</a></Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/puncture-repair"><a className="w-full">Puncture Repair</a></Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/battery-replacement"><a className="w-full">Battery Replacement</a></Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link href="/locations">
+            <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Locations</a>
+          </Link>
+          <a href="/#contact" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Contact</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
@@ -70,18 +87,18 @@ export function Navbar() {
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-background border-l border-white/10">
-              <div className="flex flex-col gap-8 mt-10">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-2xl font-heading font-bold text-white hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <Button className="w-full bg-primary text-black font-bold uppercase">
+            <SheetContent className="bg-background border-l border-white/10 overflow-y-auto">
+              <div className="flex flex-col gap-6 mt-10">
+                <Link href="/"><a className="text-xl font-heading font-bold text-white hover:text-primary">Home</a></Link>
+                <div className="flex flex-col gap-4 pl-4 border-l border-white/10">
+                  <span className="text-sm text-gray-500 uppercase tracking-widest">Services</span>
+                  <Link href="/mobile-tyre-fitting"><a className="text-lg text-gray-300 hover:text-primary">Mobile Tyre Fitting</a></Link>
+                  <Link href="/emergency-call-out"><a className="text-lg text-gray-300 hover:text-primary">Emergency Call Out</a></Link>
+                  <Link href="/puncture-repair"><a className="text-lg text-gray-300 hover:text-primary">Puncture Repair</a></Link>
+                  <Link href="/battery-replacement"><a className="text-lg text-gray-300 hover:text-primary">Battery Replacement</a></Link>
+                </div>
+                <Link href="/locations"><a className="text-xl font-heading font-bold text-white hover:text-primary">Locations</a></Link>
+                <Button className="w-full bg-primary text-black font-bold uppercase mt-4">
                   Call Now
                 </Button>
               </div>
