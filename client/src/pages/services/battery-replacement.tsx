@@ -1,5 +1,6 @@
 import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, BatteryCharging } from "lucide-react";
 import heroImage from "@assets/generated_images/car_battery_replacement_at_home.png";
@@ -41,6 +42,7 @@ export default function BatteryReplacement() {
           We don't just swap parts. We test your existing battery and charging system to ensure a replacement is actually needed, saving you money on unnecessary repairs.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

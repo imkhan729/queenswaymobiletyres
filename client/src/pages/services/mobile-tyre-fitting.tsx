@@ -1,8 +1,10 @@
 import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle, Clock, MapPin } from "lucide-react";
+import { Phone, CheckCircle, Clock, MapPin, Truck } from "lucide-react";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
+import vanInterior from "@assets/generated_images/mobile_tyre_fitting_van_interior.png";
 
 export default function MobileTyreFitting() {
   const schema = {
@@ -51,17 +53,28 @@ export default function MobileTyreFitting() {
             <p className="text-xl text-gray-300 mb-8">
               Don't waste time at a garage. Our expert fitters come to your home, office, or roadside location to fit your new tyres while you wait.
             </p>
-            <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8">
-              <Phone className="mr-2 w-5 h-5" /> Book Now: 07988 018865
-            </Button>
+            <div className="flex gap-4">
+               <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8">
+                <Phone className="mr-2 w-5 h-5" /> Book Now: 07988 018865
+               </Button>
+               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase">
+                 Get a Quote
+               </Button>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="py-16 container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+             <img src={vanInterior} alt="Inside mobile tyre fitting van" className="rounded-lg shadow-2xl border border-white/10" />
+          </div>
           <div>
             <h2 className="text-3xl font-heading font-bold text-white mb-6">WHY CHOOSE MOBILE FITTING?</h2>
+            <p className="text-gray-400 mb-6">
+              Our mobile tyre fitting service is designed around your convenience. We have transformed the traditional tyre changing experience by bringing a state-of-the-art workshop directly to your location.
+            </p>
             <div className="space-y-6">
               {[
                 "Convenience: We come to you, saving you travel time and waiting room boredom.",
@@ -77,28 +90,36 @@ export default function MobileTyreFitting() {
               ))}
             </div>
           </div>
-          <div className="bg-secondary/50 p-8 rounded border border-white/5">
-            <h3 className="text-2xl font-heading font-bold text-white mb-4">HOW IT WORKS</h3>
-            <ol className="relative border-l border-primary/30 ml-3 space-y-8">
-              <li className="mb-10 ml-6">
-                <span className="absolute flex items-center justify-center w-8 h-8 bg-primary rounded-full -left-4 ring-4 ring-background text-black font-bold">1</span>
-                <h4 className="flex items-center mb-1 text-lg font-bold text-white">Contact Us</h4>
-                <p className="mb-4 text-base font-normal text-gray-400">Call us or book online. Tell us your tyre size and location.</p>
-              </li>
-              <li className="mb-10 ml-6">
-                <span className="absolute flex items-center justify-center w-8 h-8 bg-primary rounded-full -left-4 ring-4 ring-background text-black font-bold">2</span>
-                <h4 className="flex items-center mb-1 text-lg font-bold text-white">We Arrive</h4>
-                <p className="mb-4 text-base font-normal text-gray-400">Our technician arrives at your chosen location with your new tyres.</p>
-              </li>
-              <li className="ml-6">
-                <span className="absolute flex items-center justify-center w-8 h-8 bg-primary rounded-full -left-4 ring-4 ring-background text-black font-bold">3</span>
-                <h4 className="flex items-center mb-1 text-lg font-bold text-white">Job Done</h4>
-                <p className="mb-4 text-base font-normal text-gray-400">We fit, balance, and check your tyres. You pay and drive away safely.</p>
-              </li>
-            </ol>
-          </div>
+        </div>
+
+        <div className="bg-secondary/50 p-8 rounded border border-white/5">
+            <h3 className="text-2xl font-heading font-bold text-white mb-8 text-center">HOW IT WORKS</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Phone className="w-8 h-8 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">1. Contact Us</h4>
+                    <p className="text-gray-400">Call us or book online. Tell us your tyre size and location.</p>
+                </div>
+                <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Truck className="w-8 h-8 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">2. We Arrive</h4>
+                    <p className="text-gray-400">Our technician arrives at your chosen location with your new tyres.</p>
+                </div>
+                <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle className="w-8 h-8 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">3. Job Done</h4>
+                    <p className="text-gray-400">We fit, balance, and check your tyres. You pay and drive away safely.</p>
+                </div>
+            </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

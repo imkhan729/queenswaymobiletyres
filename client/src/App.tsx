@@ -10,6 +10,7 @@ import EmergencyCallOut from "@/pages/services/emergency-call-out";
 import PunctureRepair from "@/pages/services/puncture-repair";
 import BatteryReplacement from "@/pages/services/battery-replacement";
 import Locations from "@/pages/locations";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/puncture-repair" component={PunctureRepair} />
       <Route path="/battery-replacement" component={BatteryReplacement} />
       <Route path="/locations" component={Locations} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );

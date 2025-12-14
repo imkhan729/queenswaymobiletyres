@@ -1,5 +1,6 @@
 import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone } from "lucide-react";
 
@@ -61,6 +62,7 @@ export default function Locations() {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

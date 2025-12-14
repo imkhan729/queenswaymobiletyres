@@ -1,5 +1,6 @@
 import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Wrench } from "lucide-react";
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.png";
@@ -60,6 +61,7 @@ export default function PunctureRepair() {
           *Our technicians will always inspect the tyre first. If it cannot be repaired safely, we carry replacement tyres to get you moving.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

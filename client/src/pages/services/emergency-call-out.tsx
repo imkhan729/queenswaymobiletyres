@@ -1,5 +1,6 @@
 import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, AlertTriangle, Clock, ShieldAlert } from "lucide-react";
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.png";
@@ -70,6 +71,7 @@ export default function EmergencyCallOut() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
