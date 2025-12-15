@@ -19,7 +19,8 @@ import {
   Star,
   CheckCircle,
   CreditCard,
-  CalendarCheck
+  CalendarCheck,
+  Quote
 } from "lucide-react";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
 import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.png";
@@ -364,6 +365,65 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-secondary/30 relative border-t border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Customer Reviews</h2>
+            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white">WHAT OUR CUSTOMERS SAY</h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sarah Jenkins",
+                location: "Watford",
+                text: "Absolutely brilliant service. Had a blowout on the M1 and they arrived within 40 minutes. Professional, friendly and got me back on the road quickly. Highly recommended!",
+                rating: 5
+              },
+              {
+                name: "David Miller",
+                location: "St Albans",
+                text: "Used their home fitting service for 4 new tyres. Much cheaper than my local garage and so much more convenient. The fitter was polite and did a great job.",
+                rating: 5
+              },
+              {
+                name: "James Thompson",
+                location: "Harrow",
+                text: "Saved my morning! Car battery died just as I was leaving for work. They came out, tested it, and fitted a new one within the hour. Excellent service.",
+                rating: 5
+              }
+            ].map((review, i) => (
+              <div key={i} className="bg-background p-8 rounded-lg border border-white/5 relative group hover:border-primary/30 transition-colors">
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10 group-hover:text-primary/20 transition-colors" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic leading-relaxed">"{review.text}"</p>
+                <div>
+                  <p className="text-white font-bold">{review.name}</p>
+                  <p className="text-primary text-sm">{review.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+              <span className="text-white font-bold">4.9/5</span>
+              <div className="flex gap-0.5">
+                 {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 text-yellow-500 fill-current" />
+                  ))}
+              </div>
+              <span className="text-gray-400 text-sm">Average Customer Rating</span>
             </div>
           </div>
         </div>
