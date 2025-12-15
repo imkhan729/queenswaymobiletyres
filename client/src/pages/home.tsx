@@ -16,7 +16,10 @@ import {
   Fuel,
   Battery,
   ChevronRight,
-  Star
+  Star,
+  CheckCircle,
+  CreditCard,
+  CalendarCheck
 } from "lucide-react";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
 import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.png";
@@ -147,58 +150,70 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Mobile Tyre Fitting"
-                description="We come to your home or workplace to fit new tyres. No waiting in garages, we work around your schedule."
-                icon={Truck}
-                image={vanInterior}
-              />
+              <Link href="/mobile-tyre-fitting" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Mobile Tyre Fitting"
+                  description="We come to your home or workplace to fit new tyres. No waiting in garages, we work around your schedule."
+                  icon={Truck}
+                  image={vanInterior}
+                />
+              </Link>
             </motion.div>
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Emergency Call-Out"
-                description="Stranded? Our 24/7 emergency team aims to reach you within 30-60 minutes to get you back on the road."
-                icon={Clock}
-                image={tyreTread}
-              />
+              <Link href="/emergency-call-out" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Emergency Call-Out"
+                  description="Stranded? Our 24/7 emergency team aims to reach you within 30-60 minutes to get you back on the road."
+                  icon={Clock}
+                  image={tyreTread}
+                />
+              </Link>
             </motion.div>
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Puncture Repair"
-                description="Professional puncture repairs carried out on-site to British Standards (BS AU 159). Save money on new tyres."
-                icon={Wrench}
-                image={tyreImage}
-              />
+              <Link href="/puncture-repair" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Puncture Repair"
+                  description="Professional puncture repairs carried out on-site to British Standards (BS AU 159). Save money on new tyres."
+                  icon={Wrench}
+                  image={tyreImage}
+                />
+              </Link>
             </motion.div>
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Wheel Balancing"
-                description="State-of-the-art mobile balancing equipment to ensure smooth driving and prevent premature tyre wear."
-                icon={Settings}
-                image={wheelBalancing}
-              />
+              <Link href="/wheel-balancing" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Wheel Balancing"
+                  description="State-of-the-art mobile balancing equipment to ensure smooth driving and prevent premature tyre wear."
+                  icon={Settings}
+                  image={wheelBalancing}
+                />
+              </Link>
             </motion.div>
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Battery Replacement"
-                description="Car won't start? We can supply and fit a new battery at your location for all vehicle makes and models."
-                icon={Battery}
-                image={batteryImage}
-              />
+              <Link href="/battery-replacement" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Battery Replacement"
+                  description="Car won't start? We can supply and fit a new battery at your location for all vehicle makes and models."
+                  icon={Battery}
+                  image={batteryImage}
+                />
+              </Link>
             </motion.div>
             <motion.div variants={item} className="h-full">
-              <ServiceCard 
-                title="Emergency Fuel"
-                description="Run out of fuel? We can deliver petrol or diesel to get you to the nearest station."
-                icon={Fuel}
-                image={fuelImage}
-              />
+              <Link href="/emergency-fuel" className="block h-full cursor-pointer">
+                <ServiceCard 
+                  title="Emergency Fuel"
+                  description="Run out of fuel? We can deliver petrol or diesel to get you to the nearest station."
+                  icon={Fuel}
+                  image={fuelImage}
+                />
+              </Link>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Detailed Content for SEO */}
+      {/* Detailed Content for SEO - Why Choose Us 1 */}
       <section className="py-24 bg-background border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16">
@@ -224,6 +239,14 @@ export default function Home() {
                    <MapPin className="text-primary w-5 h-5" /> Greater London Coverage
                  </div>
                </div>
+               
+               <div className="pt-6">
+                 <Link href="/about">
+                   <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black">
+                     Learn More About Our Company
+                   </Button>
+                 </Link>
+               </div>
              </div>
              <div className="relative h-full min-h-[400px]">
                 <img 
@@ -236,7 +259,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About / Experience Section */}
+      {/* How It Works Section */}
+      <section className="py-24 bg-secondary/50 border-y border-white/5">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Simple Process</h2>
+          <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-16">HOW IT WORKS</h3>
+          
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="relative">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/20 text-primary">
+                <Phone className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3">1. Contact Us</h4>
+              <p className="text-gray-400">Call or WhatsApp us with your tyre size and location.</p>
+              <div className="hidden md:block absolute top-10 -right-1/2 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent" />
+            </div>
+            
+            <div className="relative">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/20 text-primary">
+                <CalendarCheck className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3">2. Book Slot</h4>
+              <p className="text-gray-400">Choose a time and location that suits you best.</p>
+              <div className="hidden md:block absolute top-10 -right-1/2 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent" />
+            </div>
+
+            <div className="relative">
+               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/20 text-primary">
+                <Truck className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3">3. We Arrive</h4>
+              <p className="text-gray-400">Our expert fitter arrives and completes the job on-site.</p>
+              <div className="hidden md:block absolute top-10 -right-1/2 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent" />
+            </div>
+
+            <div className="relative">
+               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-primary/20 text-primary">
+                <CreditCard className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3">4. Job Done</h4>
+              <p className="text-gray-400">Pay securely by card or cash once you're happy.</p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary text-black hover:bg-primary/90 font-bold uppercase tracking-wide">
+                Book Your Fitting Now
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section - Why Choose Us 2 */}
       <section className="py-24 bg-secondary relative">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -254,7 +330,7 @@ export default function Home() {
             </div>
             
             <div>
-              <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Why Choose Us</h2>
+              <h2 className="text-primary font-bold uppercase tracking-widest mb-2">The Queensway Difference</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">EXPERIENCE THE FUTURE OF TYRE CARE</h3>
               <p className="text-gray-400 mb-6 text-lg">
                 Gone are the days of wasting hours at a garage. Queensway Mobile Tyres brings the workshop to you. 
@@ -276,11 +352,18 @@ export default function Home() {
                 ))}
               </ul>
               
-              <Link href="/about">
-                <Button className="bg-white text-black hover:bg-gray-200 font-bold uppercase tracking-wide">
-                  Read More About Us
-                </Button>
-              </Link>
+              <div className="flex gap-4">
+                <Link href="/about">
+                  <Button className="bg-white text-black hover:bg-gray-200 font-bold uppercase tracking-wide">
+                    About Us
+                  </Button>
+                </Link>
+                <Link href="/locations">
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black font-bold uppercase tracking-wide">
+                    View Coverage
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

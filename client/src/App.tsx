@@ -9,6 +9,8 @@ import MobileTyreFitting from "@/pages/services/mobile-tyre-fitting";
 import EmergencyCallOut from "@/pages/services/emergency-call-out";
 import PunctureRepair from "@/pages/services/puncture-repair";
 import BatteryReplacement from "@/pages/services/battery-replacement";
+import WheelBalancing from "@/pages/services/wheel-balancing";
+import EmergencyFuel from "@/pages/services/emergency-fuel";
 import Locations from "@/pages/locations";
 import Contact from "@/pages/contact";
 import PrivacyPolicy from "@/pages/privacy-policy";
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/emergency-call-out" component={EmergencyCallOut} />
       <Route path="/puncture-repair" component={PunctureRepair} />
       <Route path="/battery-replacement" component={BatteryReplacement} />
+      <Route path="/wheel-balancing" component={WheelBalancing} />
+      <Route path="/emergency-fuel" component={EmergencyFuel} />
       <Route path="/locations" component={Locations} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={PrivacyPolicy} />
