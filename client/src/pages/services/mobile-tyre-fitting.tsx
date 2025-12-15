@@ -2,9 +2,10 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle, Clock, MapPin, Truck } from "lucide-react";
+import { Phone, CheckCircle, Clock, MapPin, Truck, ShieldCheck, Wrench, Star } from "lucide-react";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
 import vanInterior from "@assets/generated_images/mobile_tyre_fitting_van_interior.png";
+import { Link } from "wouter";
 
 export default function MobileTyreFitting() {
   const schema = {
@@ -33,90 +34,191 @@ export default function MobileTyreFitting() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Mobile Tyre Fitting London & Hertfordshire"
-        description="Same day mobile tyre fitting at home or work. We bring the garage to you. Covering London, Watford, St Albans, and M25 corridor. Book now!"
-        keywords="mobile tyre fitting london, mobile tyres watford, home tyre fitting, tyre replacement at work"
+        title="Mobile Tyre Fitting London & Hertfordshire | Same Day Service"
+        description="Expert mobile tyre fitting at your home or work. We bring the garage to you. fast, reliable & affordable tyre replacement in London, Watford & St Albans. Book now!"
+        keywords="mobile tyre fitting london, mobile tyres watford, home tyre fitting, tyre replacement at work, mobile tyre fitter near me, emergency tyre fitting"
         image={heroImage}
         schema={schema}
       />
       <Navbar />
       
+      {/* Hero Section */}
       <div className="pt-24 pb-12 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src={heroImage} alt="Mobile Tyre Fitting" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="Mobile Tyre Fitting Van London" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6">
               MOBILE TYRE FITTING <br /><span className="text-primary">AT YOUR DOORSTEP</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Don't waste time at a garage. Our expert fitters come to your home, office, or roadside location to fit your new tyres while you wait.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Experience the ultimate convenience with Queensway Mobile Tyres. We bring the tyre depot to your home, workplace, or roadside location. 
+              No more waiting in cold garages or disrupting your busy schedule. Our expert technicians fit your new tyres while you relax or continue working.
             </p>
-            <div className="flex gap-4">
-               <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+               <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                 <Phone className="mr-2 w-5 h-5" /> Book Now: 07988 018865
                </Button>
-               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase">
-                 Get a Quote
-               </Button>
+               <Link href="/contact">
+                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
+                   Get a Quote Online
+                 </Button>
+               </Link>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="py-16 container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-             <img src={vanInterior} alt="Inside mobile tyre fitting van" className="rounded-lg shadow-2xl border border-white/10" />
-          </div>
-          <div>
-            <h2 className="text-3xl font-heading font-bold text-white mb-6">WHY CHOOSE MOBILE FITTING?</h2>
-            <p className="text-gray-400 mb-6">
-              Our mobile tyre fitting service is designed around your convenience. We have transformed the traditional tyre changing experience by bringing a state-of-the-art workshop directly to your location.
-            </p>
-            <div className="space-y-6">
-              {[
-                "Convenience: We come to you, saving you travel time and waiting room boredom.",
-                "Cost-Effective: Competitive pricing often cheaper than physical garages.",
-                "Expert Service: Fully trained technicians with state-of-the-art mobile equipment.",
-                "Comprehensive: Balancing, new valves, and old tyre disposal included.",
-                "Safety: Contactless service available for your peace of mind."
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
-                  <p className="text-gray-300">{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <div className="grid md:grid-cols-3 gap-12">
+          
+          {/* Left Column: Content */}
+          <div className="md:col-span-2 space-y-12">
+            
+            {/* Introduction */}
+            <section>
+              <h2 className="text-3xl font-heading font-bold text-white mb-6">Why Choose Mobile Tyre Fitting?</h2>
+              <p className="text-gray-400 mb-4 leading-relaxed">
+                In today's fast-paced world, finding time to visit a tyre garage can be a hassle. You have to drive there, wait in a queue, and often waste hours of your valuable time. 
+                <strong>Mobile tyre fitting</strong> changes everything. We bring a fully equipped tyre workshop directly to you.
+              </p>
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Our state-of-the-art vans are fitted with the latest tyre changing and balancing machinery, capable of handling everything from standard 13-inch wheels to 22-inch high-performance alloys, 
+                including run-flat tyres and 4x4 specialist fitments. Whether you drive a Ford Fiesta, a Mercedes S-Class, or a Transit van, we have the technology and expertise to handle your vehicle with care.
+              </p>
+            </section>
 
-        <div className="bg-secondary/50 p-8 rounded border border-white/5">
-            <h3 className="text-2xl font-heading font-bold text-white mb-8 text-center">HOW IT WORKS</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Phone className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="text-xl font-bold text-white mb-2">1. Contact Us</h4>
-                    <p className="text-gray-400">Call us or book online. Tell us your tyre size and location.</p>
+            {/* The Process */}
+            <section className="bg-secondary/30 p-8 rounded-lg border border-white/5">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Our Comprehensive Service Includes:</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  "Removal of old tyre and safe disposal",
+                  "New tyre installation",
+                  "New rubber valve replacement (standard)",
+                  "Electronic wheel balancing",
+                  "Bead seal application if required",
+                  "Wheel nut torque check to manufacturer specs"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle className="text-primary w-5 h-5 flex-shrink-0 mt-1" />
+                    <span className="text-gray-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Benefits Section */}
+            <section>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Benefits of Our Mobile Service</h3>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
+                    <Clock className="text-primary w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">Save Time & Hassle</h4>
+                    <p className="text-gray-400">
+                      No need to take time off work or give up your weekend. We come to your office car park or driveway. 
+                      You simply hand us the keys (or locking wheel nut), and we do the rest while you carry on with your day.
+                    </p>
+                  </div>
                 </div>
-                <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Truck className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="text-xl font-bold text-white mb-2">2. We Arrive</h4>
-                    <p className="text-gray-400">Our technician arrives at your chosen location with your new tyres.</p>
+                
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
+                    <ShieldCheck className="text-primary w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">Safety First</h4>
+                    <p className="text-gray-400">
+                      Driving on damaged or illegal tyres to get to a garage is dangerous and risks points on your license. 
+                      Stay safe at home and let us come to you. All our technicians are fully trained and insured.
+                    </p>
+                  </div>
                 </div>
-                <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="text-xl font-bold text-white mb-2">3. Job Done</h4>
-                    <p className="text-gray-400">We fit, balance, and check your tyres. You pay and drive away safely.</p>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center flex-shrink-0">
+                    <Wrench className="text-primary w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">Expert Fitting</h4>
+                    <p className="text-gray-400">
+                      Our technicians are experienced professionals who treat every car like their own. We use protective equipment 
+                      to ensure your alloy wheels are never damaged during the fitting process.
+                    </p>
+                  </div>
                 </div>
+              </div>
+            </section>
+
+            {/* Areas We Cover */}
+            <section className="bg-primary/5 p-8 rounded-lg border border-primary/10">
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Areas We Cover</h3>
+              <p className="text-gray-400 mb-4">
+                We are proud to serve a wide area across Greater London and the Home Counties. Our <Link href="/locations" className="text-primary hover:underline">coverage area</Link> includes:
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Watford", "St Albans", "Hemel Hempstead", "Harrow", "Uxbridge", "Barnet", "Enfield", "Slough", "High Wycombe", "Luton", "M25 Corridor"].map(area => (
+                  <span key={area} className="px-3 py-1 bg-background rounded-full text-sm text-gray-300 border border-white/10 flex items-center gap-1">
+                    <MapPin className="w-3 h-3 text-primary" /> {area}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+          </div>
+
+          {/* Right Column: Sidebar */}
+          <div className="space-y-8">
+            <div className="sticky top-24">
+              {/* Image Card */}
+              <div className="bg-secondary rounded-lg overflow-hidden border border-white/10 mb-8">
+                <img src={vanInterior} alt="Mobile Tyre Fitting Van Equipment" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h4 className="text-lg font-bold text-white mb-2">State-of-the-Art Vans</h4>
+                  <p className="text-sm text-gray-400">
+                    Our vans are equipped with high-performance tyre changers and digital wheel balancers, powered by on-board generators and compressed air systems.
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact Card */}
+              <div className="bg-primary p-6 rounded-lg text-black text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2 uppercase">Need Tyres Today?</h3>
+                <p className="mb-6 font-medium">We often have same-day appointments available!</p>
+                <a href="tel:07988018865">
+                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-bold h-12 uppercase mb-3">
+                    Call 07988 018865
+                  </Button>
+                </a>
+                <a href="https://wa.me/447988018865" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full border-black text-black hover:bg-black/10 font-bold h-12 uppercase">
+                    WhatsApp Us
+                  </Button>
+                </a>
+              </div>
+
+              {/* Trust Signals */}
+              <div className="bg-secondary/50 p-6 rounded-lg border border-white/5 space-y-4">
+                <div className="flex items-center gap-3 text-gray-300">
+                  <Star className="text-yellow-500 w-5 h-5 fill-current" />
+                  <span>5-Star Rated Service</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300">
+                  <Truck className="text-primary w-5 h-5" />
+                  <span>We Come To You</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300">
+                  <ShieldCheck className="text-primary w-5 h-5" />
+                  <span>Fully Insured</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
       <Footer />
