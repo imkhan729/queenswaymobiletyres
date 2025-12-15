@@ -39,7 +39,7 @@ export function Footer() {
               <li><Link href="/puncture-repair"><a className="text-gray-400 hover:text-primary transition-colors">Puncture Repair</a></Link></li>
               <li><Link href="/locations"><a className="text-gray-400 hover:text-primary transition-colors">Locations</a></Link></li>
               <li><Link href="/contact"><a className="text-gray-400 hover:text-primary transition-colors">Contact Us</a></Link></li>
-              <li><a href="https://www.qeenswaymobiletyres.com/booking" className="text-gray-400 hover:text-primary transition-colors">Book Online</a></li>
+              <li><Link href="/booking"><a className="text-gray-400 hover:text-primary transition-colors">Book Online</a></Link></li>
             </ul>
           </div>
 
@@ -51,8 +51,8 @@ export function Footer() {
               <li><Link href="/puncture-repair"><a className="text-gray-400 hover:text-primary transition-colors">Puncture Repairs</a></Link></li>
               <li><Link href="/emergency-call-out"><a className="text-gray-400 hover:text-primary transition-colors">Roadside Assistance</a></Link></li>
               <li><Link href="/battery-replacement"><a className="text-gray-400 hover:text-primary transition-colors">Battery Replacement</a></Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Wheel Balancing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Locking Nut Removal</a></li>
+              <li><Link href="/wheel-balancing"><a className="text-gray-400 hover:text-primary transition-colors">Wheel Balancing</a></Link></li>
+              <li><Link href="/locking-nut-removal"><a className="text-gray-400 hover:text-primary transition-colors">Locking Nut Removal</a></Link></li>
             </ul>
           </div>
 
