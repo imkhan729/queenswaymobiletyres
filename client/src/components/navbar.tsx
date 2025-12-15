@@ -87,6 +87,9 @@ export function Navbar() {
           <Link href="/locations">
             <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Locations</a>
           </Link>
+          <Link href="/blog">
+            <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Blog</a>
+          </Link>
           <Link href="/contact">
             <a className="text-sm font-medium text-gray-300 hover:text-primary transition-colors uppercase tracking-wider">Contact</a>
           </Link>
@@ -120,6 +123,7 @@ export function Navbar() {
                   <Link href="/battery-replacement"><a className="text-lg text-gray-300 hover:text-primary">Battery Replacement</a></Link>
                 </div>
                 <Link href="/locations"><a className="text-xl font-heading font-bold text-white hover:text-primary">Locations</a></Link>
+                <Link href="/blog"><a className="text-xl font-heading font-bold text-white hover:text-primary">Blog</a></Link>
                 <Link href="/contact"><a className="text-xl font-heading font-bold text-white hover:text-primary">Contact</a></Link>
                 <a href="tel:07988018865">
                   <Button className="w-full bg-primary text-black font-bold uppercase mt-4">

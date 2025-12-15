@@ -13,6 +13,10 @@ import WheelBalancing from "@/pages/services/wheel-balancing";
 import EmergencyFuel from "@/pages/services/emergency-fuel";
 import LockingNutRemoval from "@/pages/services/locking-nut-removal";
 import Booking from "@/pages/booking";
+import Blog from "@/pages/blog";
+import TyreSafetyTips from "@/pages/blog/tyre-safety-tips";
+import WhenToReplaceTyres from "@/pages/blog/when-to-replace-tyres";
+import WinterTyresGuide from "@/pages/blog/winter-tyres-guide";
 import Locations from "@/pages/locations";
 import Contact from "@/pages/contact";
 import PrivacyPolicy from "@/pages/privacy-policy";
@@ -32,6 +36,10 @@ function Router() {
       <Route path="/emergency-fuel" component={EmergencyFuel} />
       <Route path="/locking-nut-removal" component={LockingNutRemoval} />
       <Route path="/booking" component={Booking} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/tyre-safety-tips" component={TyreSafetyTips} />
+      <Route path="/blog/when-to-replace-tyres" component={WhenToReplaceTyres} />
+      <Route path="/blog/winter-tyres-guide" component={WinterTyresGuide} />
       <Route path="/locations" component={Locations} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={PrivacyPolicy} />
