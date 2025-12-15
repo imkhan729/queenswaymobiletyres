@@ -76,8 +76,8 @@ export default function Home() {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-heading font-bold leading-none mb-6 text-white">
-              MOBILE TYRES <br />
-              <span className="text-primary">FITTED AT HOME</span>
+              MOBILE TYRE FITTING <br />
+              <span className="text-primary">LONDON & HERTS</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl font-light">
