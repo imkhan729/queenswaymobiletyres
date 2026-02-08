@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Fuel, AlertTriangle, Droplets, MapPin, Clock, Truck, CheckCircle } from "lucide-react";
-import heroImage from "@assets/generated_images/emergency_fuel_canister_pour.png";
+import heroImage from "@assets/generated_images/emergency_fuel_canister_pour.webp";
 import { Link } from "wouter";
 
 export default function EmergencyFuel() {
@@ -23,7 +23,7 @@ export default function EmergencyFuel() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Emergency Fuel Delivery London | Petrol & Diesel"
         description="Run out of fuel? Fast emergency fuel delivery service in London & Hertfordshire. We bring petrol or diesel to you 24/7. Call 07988 018865."
         keywords="emergency fuel delivery, run out of petrol, diesel delivery london, roadside fuel, fuel rescue, empty tank help"
@@ -31,7 +31,7 @@ export default function EmergencyFuel() {
         schema={schema}
       />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="pt-24 pb-12 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -40,24 +40,24 @@ export default function EmergencyFuel() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary font-bold text-sm uppercase tracking-wider mb-6">
-               <AlertTriangle className="w-4 h-4" /> 24/7 Emergency Service
+              <AlertTriangle className="w-4 h-4" /> 24/7 Emergency Service
             </div>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6">
               EMERGENCY <span className="text-primary">FUEL DELIVERY</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Tank empty? Engine cut out? Don't risk walking down dangerous roads to a petrol station. 
+              Tank empty? Engine cut out? Don't risk walking down dangerous roads to a petrol station.
               We deliver Petrol and Diesel directly to your vehicle's location to get you moving again safely.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-               <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                 <Phone className="mr-2 w-5 h-5" /> Call Now: 07988 018865
-               </Button>
-               <Link href="/contact">
-                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
-                   Get Help Online
-                 </Button>
-               </Link>
+              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
+                  Get Help Online
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function EmergencyFuel() {
       {/* Main Content */}
       <div className="py-16 container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12">
-          
+
           {/* Left Column */}
           <div className="md:col-span-2 space-y-12">
             <section>
@@ -75,7 +75,7 @@ export default function EmergencyFuel() {
                 Running out of fuel is stressful and embarrassing, but it happens to the best of us. Faulty gauges, distraction, or unexpected traffic can leave you stranded miles from the nearest forecourt.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Queensway Mobile Tyres provides a rapid response <strong>emergency fuel delivery service</strong>. We will bring enough fuel (typically 5-10 litres) to get you to the nearest petrol station to fill up properly. 
+                Queensway Mobile Tyres provides a rapid response <strong>emergency fuel delivery service</strong>. We will bring enough fuel (typically 5-10 litres) to get you to the nearest petrol station to fill up properly.
                 This service is safer and faster than walking or trying to hitch a ride.
               </p>
             </section>
@@ -135,20 +135,20 @@ export default function EmergencyFuel() {
           {/* Right Column */}
           <div className="space-y-8">
             <div className="bg-secondary p-8 rounded-lg border border-white/10 sticky top-24 text-center">
-               <h3 className="text-2xl font-bold text-white mb-4">Urgent Assistance</h3>
-               <p className="text-gray-400 mb-6 text-sm">
-                 If you are in a dangerous location (live lane of a motorway), please call 999 first. For safe roadside locations, call us:
-               </p>
-               <a href="tel:07988018865">
-                 <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold h-14 uppercase text-lg animate-pulse">
-                   <Phone className="mr-2 w-5 h-5" /> 07988 018865
-                 </Button>
-               </a>
-               <p className="mt-4 text-xs text-gray-500">
-                 Available 24 hours a day, 7 days a week.
-               </p>
+              <h3 className="text-2xl font-bold text-white mb-4">Urgent Assistance</h3>
+              <p className="text-gray-400 mb-6 text-sm">
+                If you are in a dangerous location (live lane of a motorway), please call 999 first. For safe roadside locations, call us:
+              </p>
+              <a href="tel:07988018865">
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold h-14 uppercase text-lg animate-pulse">
+                  <Phone className="mr-2 w-5 h-5" /> 07988 018865
+                </Button>
+              </a>
+              <p className="mt-4 text-xs text-gray-500">
+                Available 24 hours a day, 7 days a week.
+              </p>
             </div>
-            
+
             <div className="bg-secondary/50 p-6 rounded-lg border border-white/5">
               <h4 className="font-bold text-white mb-2">Other Services</h4>
               <ul className="space-y-2 text-sm">

@@ -4,7 +4,13 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight, Tag } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
+import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
+import tyreSafetyImage from "@assets/generated_images/tyre_safety_check.webp";
+import winterTyreImage from "@assets/generated_images/winter_driving_uk.webp";
+import replaceTyreImage from "@assets/generated_images/worn_tyre_tread_indicator.webp";
+import mobileFittingImage from "@assets/generated_images/mobile_tyre_fitting_london.webp";
+import emergencyImage from "@assets/generated_images/flat_tyre_emergency.webp";
+import tyreMarkingsImage from "@assets/generated_images/tyre_sidewall_markings.webp";
 
 // Blog Post Data
 const blogPosts = [
@@ -16,7 +22,7 @@ const blogPosts = [
     author: "Queensway Team",
     category: "Safety",
     slug: "/blog/tyre-safety-tips",
-    image: "https://images.unsplash.com/photo-1578844251758-2f71da645217?q=80&w=2071&auto=format&fit=crop"
+    image: tyreSafetyImage
   },
   {
     id: 2,
@@ -26,7 +32,7 @@ const blogPosts = [
     author: "Senior Technician",
     category: "Maintenance",
     slug: "/blog/when-to-replace-tyres",
-    image: "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?q=80&w=2070&auto=format&fit=crop"
+    image: replaceTyreImage
   },
   {
     id: 3,
@@ -36,20 +42,50 @@ const blogPosts = [
     author: "Queensway Team",
     category: "Guides",
     slug: "/blog/winter-tyres-guide",
-    image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?q=80&w=2128&auto=format&fit=crop"
+    image: winterTyreImage
+  },
+  {
+    id: 4,
+    title: "Why Mobile Tyre Fitting is the Best Choice for Londoners",
+    excerpt: "Save time and avoid the hassle of garage visits. Discover why busy London drivers are switching to mobile tyre fitting services.",
+    date: "January 10, 2024",
+    author: "Queensway Team",
+    category: "Lifestyle",
+    slug: "/blog/mobile-tyre-fitting-london",
+    image: mobileFittingImage
+  },
+  {
+    id: 5,
+    title: "Handling a Tyre Blowout on the Motorway: A Safety Guide",
+    excerpt: "A tyre blowout at high speed can be terrifying. Learn the essential safety steps to keep you and your passengers safe until help arrives.",
+    date: "February 2, 2024",
+    author: "Safety Expert",
+    category: "Safety",
+    slug: "/blog/handling-tyre-blowout",
+    image: emergencyImage
+  },
+  {
+    id: 6,
+    title: "Decoding Tyre Markings: What Do These Numbers Mean?",
+    excerpt: "Confused by the numbers on your tyre sidewall? We decode the markings so you can choose the right tyres for your vehicle.",
+    date: "February 20, 2024",
+    author: "Tech Specialist",
+    category: "Education",
+    slug: "/blog/decoding-tyre-markings",
+    image: tyreMarkingsImage
   }
 ];
 
 export default function Blog() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Tyre Advice & News | Queensway Mobile Tyres Blog"
         description="Read the latest news, safety tips, and expert advice on tyre maintenance from London's leading mobile tyre fitting service."
         keywords="tyre blog, car maintenance tips, tyre safety advice, mobile mechanic blog"
       />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="pt-24 pb-12 bg-secondary border-b border-white/5">
         <div className="container mx-auto px-4 text-center">
@@ -68,30 +104,30 @@ export default function Blog() {
           {blogPosts.map((post) => (
             <div key={post.id} className="bg-secondary/30 rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 transition-all group h-full flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
+                <img
+                  src={post.image}
+                  alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   {post.category}
                 </div>
               </div>
-              
+
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
                   <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {post.date}</span>
                   <span className="flex items-center gap-1"><User className="w-3 h-3" /> {post.author}</span>
                 </div>
-                
+
                 <h2 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                   <Link href={post.slug}>{post.title}</Link>
                 </h2>
-                
+
                 <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
                   {post.excerpt}
                 </p>
-                
+
                 <Link href={post.slug}>
                   <Button variant="link" className="p-0 h-auto text-primary hover:text-white font-bold uppercase text-xs tracking-widest flex items-center gap-2 mt-auto">
                     Read Article <ArrowRight className="w-4 h-4" />
@@ -105,19 +141,19 @@ export default function Blog() {
 
       {/* Newsletter / CTA */}
       <div className="py-16 bg-secondary relative overflow-hidden">
-         <div className="container mx-auto px-4 relative z-10 text-center">
-           <h2 className="text-3xl font-heading font-bold text-white mb-6">Need Professional Advice?</h2>
-           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-             If you're unsure about the condition of your tyres or need specific advice for your vehicle, our team is happy to help.
-           </p>
-           <div className="flex justify-center gap-4">
-             <Link href="/contact">
-               <Button size="lg" className="bg-primary text-black font-bold uppercase">
-                 Contact Us
-               </Button>
-             </Link>
-           </div>
-         </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h2 className="text-3xl font-heading font-bold text-white mb-6">Need Professional Advice?</h2>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            If you're unsure about the condition of your tyres or need specific advice for your vehicle, our team is happy to help.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary text-black font-bold uppercase">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <Footer />

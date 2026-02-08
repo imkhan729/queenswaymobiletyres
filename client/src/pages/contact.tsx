@@ -3,18 +3,18 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.png";
+import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Contact Us | Queensway Mobile Tyres"
         description="Get in touch for mobile tyre fitting or emergency assistance. Call 07988 018865 or email us. 24/7 support available."
         keywords="contact mobile tyres, tyre fitting phone number, emergency tyre contact"
       />
       <Navbar />
-      
+
       <div className="pt-24 pb-12 bg-secondary text-center">
         <h1 className="text-5xl font-heading font-bold text-white mb-6">
           GET IN <span className="text-primary">TOUCH</span>
@@ -29,7 +29,7 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-8">
             <h2 className="text-3xl font-heading font-bold text-white mb-6">CONTACT INFORMATION</h2>
-            
+
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 rounded bg-primary flex items-center justify-center shrink-0">
                 <Phone className="w-6 h-6 text-black" />
@@ -48,7 +48,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-white mb-1">Email</h3>
                 <p className="text-gray-400 mb-2">For general enquiries and quotes</p>
-                <a href="mailto:info@queenswaymobiletyres.com" className="text-lg text-white hover:text-primary transition-colors">info@queenswaymobiletyres.com</a>
+                <a href="mailto:info@queenswaymobiletyres.co.uk" className="text-lg text-white hover:text-primary transition-colors">info@queenswaymobiletyres.co.uk</a>
               </div>
             </div>
 
@@ -102,8 +102,24 @@ export default function Contact() {
             </form>
           </div>
         </div>
+
+
+        {/* Map Section */}
+        <div className="mt-16 bg-secondary/30 p-4 rounded-lg border border-white/10 h-[400px] relative overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.7281066703!2d-0.41585800000000003!3d51.651581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aa18d5336d3%3A0x6b1622d42407510!2sWatford!5e0!3m2!1sen!2suk!4v1650000000000!5m2!1sen!2suk"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Queensway Mobile Tyres Service Area"
+            className="w-full h-full rounded"
+          />
+        </div>
       </div>
       <Footer />
-    </div>
+    </div >
   );
 }

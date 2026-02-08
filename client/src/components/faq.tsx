@@ -8,28 +8,36 @@ import {
 export function FAQ() {
   const faqs = [
     {
-      question: "How quickly can you reach me for emergency tyre fitting?",
-      answer: "We aim to reach most locations within London and the M25 corridor within 30-60 minutes. Our strategically placed mobile units ensure rapid response times for emergencies."
+      question: "Is mobile tyre fitting actually cheaper?",
+      answer: "Often, yes. Mobile tyre fitting is very cost-effective because we don't have the high overheads of a physical garage waiting room. Plus, you save money on fuel and the potential loss of earnings from taking time off work to visit a tyre shop."
     },
     {
-      question: "Do you offer mobile tyre fitting at my workplace?",
-      answer: "Yes! We can fit tyres at your home, workplace, or even while you're at the gym or shopping. All we need is a little space around your vehicle to work safely."
+      question: "How quickly can you get to me for an emergency tyre change?",
+      answer: "For emergency call-outs in London and surrounding areas (M1/M25 corridors), we aim to be with you within 30-60 minutes. Our vans are strategically located to ensure the fastest possible response time."
     },
     {
-      question: "Are your mobile tyre prices more expensive than a garage?",
-      answer: "Our prices are highly competitive and often cheaper than physical garages because we have lower overheads. The price we quote includes fitting, new valves, balancing, and old tyre disposal."
+      question: "Do I need to be with the car while you change the tyres?",
+      answer: "You just need to be there to hand over the keys and the locking wheel nut key. After that, you can go back inside your home or office while we work. We'll simply let you know when the job is done!"
     },
     {
-      question: "What areas do you cover?",
-      answer: "We cover Greater London, Hertfordshire, Bedfordshire, Buckinghamshire, and the M25/M1 corridors. Key areas include Watford, St Albans, Hemel Hempstead, Luton, and Barnet."
+      question: "Can you repair a puncture at my house or work?",
+      answer: "Absolutely. We come to you to repair punctures. Our technicians will inspect the tyre according to British Standard BSAU159. If it's safe to repair (e.g., in the central tread area), we'll fix it there and then."
     },
     {
-      question: "Can you repair a punctured tyre instead of replacing it?",
-      answer: "Yes, we always try to repair punctures first if it's safe and legal (BS AU 159). If a repair isn't possible, we carry a range of replacement tyres to get you back on the road."
+      question: "What happens if you can't repair my tyre?",
+      answer: "We always bring a replacement tyre on board just in case the puncture is unrepairable (for example, if it's on the sidewall or the tyre has been driven on flat). This ensures you're never left stranded."
     },
     {
-      question: "Do you operate on weekends and Bank Holidays?",
-      answer: "Absolutely. We are a 24/7 service, operating 365 days a year, including weekends and Bank Holidays, for both emergency call-outs and scheduled fittings."
+      question: "Do you balance the wheels after fitting?",
+      answer: "Yes, electronic wheel balancing is included as standard with every mobile tyre fitting. Our vans are equipped with the latest computerized balancers to ensure a smooth, vibration-free drive."
+    },
+    {
+      question: "How much space do you need to change a tyre?",
+      answer: "We need enough room to park our van near your vehicle and a little space around the car to work safely with our jacks. A standard driveway or car park space is usually sufficient."
+    },
+    {
+      question: "Can you change tyres on a Sunday or Bank Holiday?",
+      answer: "Yes, Queensway Mobile Tyres operates 24 hours a day, 7 days a week, including Sundays and Bank Holidays. Whether it's an emergency or a scheduled booking, we are available all year round."
     }
   ];
 

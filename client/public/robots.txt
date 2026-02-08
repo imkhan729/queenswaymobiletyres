@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.queenswaymobiletyres.com/sitemap.xml
+Sitemap: https://www.queenswaymobiletyres.co.uk/sitemap.xml

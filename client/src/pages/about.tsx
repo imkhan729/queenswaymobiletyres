@@ -3,17 +3,17 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Award, Users, Shield, Clock } from "lucide-react";
-import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.png";
+import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.webp";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="About Us | Queensway Mobile Tyres"
         description="Learn about Queensway Mobile Tyres, London's trusted mobile tyre fitting experts. 24/7 emergency service, experienced technicians, and customer-first approach."
       />
       <Navbar />
-      
+
       <div className="pt-24 pb-12 bg-secondary relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">
@@ -30,7 +30,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-heading font-bold text-white mb-6">OUR STORY</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Founded with the mission to eliminate the hassle of traditional garage visits, Queensway Mobile Tyres has grown into London's most reliable mobile tyre service. We realized that modern life is busy, and taking time out to sit in a waiting room for new tyres just doesn't fit into people's schedules anymore.
+              Founded with the mission to eliminate the hassle of traditional garage visits, Queensway Mobile Tyres has grown into London's most reliable mobile tyre service. <strong>With over 10 years of hands-on experience</strong> in the automotive industry, we realized that modern life is busy, and taking time out to sit in a waiting room for new tyres just doesn't fit into people's schedules anymore.
             </p>
             <p className="text-gray-400 mb-6 leading-relaxed">
               We invested in a fleet of state-of-the-art mobile vans, equipped with the latest tyre changing and balancing machinery, allowing us to deliver dealership-quality service on your driveway, at your office, or on the roadside.

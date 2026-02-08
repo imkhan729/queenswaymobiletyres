@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Lock, Unlock, ShieldCheck, AlertTriangle, CheckCircle, Wrench, Truck } from "lucide-react";
-import heroImage from "@assets/generated_images/close_up_of_car_tyre_tread.png"; // Reusing tread image as it fits generic tyre work
+import heroImage from "@assets/generated_images/close_up_of_car_tyre_tread.webp"; // Reusing tread image as it fits generic tyre work
 import { Link } from "wouter";
 
 export default function LockingNutRemoval() {
@@ -23,7 +23,7 @@ export default function LockingNutRemoval() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Locking Wheel Nut Removal London | Mobile Service"
         description="Lost your locking wheel nut key? We offer professional mobile locking nut removal. Safe removal with no damage to alloys. London & Hertfordshire. Call now!"
         keywords="locking wheel nut removal, lost locking nut key, remove stuck wheel nut, mobile locking nut removal london, damaged locking nut"
@@ -31,7 +31,7 @@ export default function LockingNutRemoval() {
         schema={schema}
       />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="pt-24 pb-12 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -43,18 +43,18 @@ export default function LockingNutRemoval() {
               LOCKING WHEEL NUT <span className="text-primary">REMOVAL</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Lost your locking wheel nut key? Nut damaged or overtightened? Don't panic. 
+              Lost your locking wheel nut key? Nut damaged or overtightened? Don't panic.
               Our mobile specialists use advanced tools to safely remove locking nuts without damaging your expensive alloy wheels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-               <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                 <Phone className="mr-2 w-5 h-5" /> Call Now: 07988 018865
-               </Button>
-               <Link href="/contact">
-                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
-                   Get a Quote
-                 </Button>
-               </Link>
+              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
+                  Get a Quote
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -63,13 +63,13 @@ export default function LockingNutRemoval() {
       {/* Main Content */}
       <div className="py-16 container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12">
-          
+
           {/* Left Column */}
           <div className="md:col-span-2 space-y-12">
             <section>
               <h2 className="text-3xl font-heading font-bold text-white mb-6">Safe & Professional Removal</h2>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Modern cars come with locking wheel nuts (or bolts) to prevent wheel theft. However, if you lose the unique key or the nut becomes damaged, removing the wheel can become a nightmare. 
+                Modern cars come with locking wheel nuts (or bolts) to prevent wheel theft. However, if you lose the unique key or the nut becomes damaged, removing the wheel can become a nightmare.
                 Many garages will turn you away or suggest drilling which risks damaging the wheel.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -114,50 +114,50 @@ export default function LockingNutRemoval() {
 
             {/* Common Scenarios */}
             <section>
-               <h3 className="text-2xl font-heading font-bold text-white mb-6">When Do You Need This Service?</h3>
-               <div className="grid sm:grid-cols-3 gap-6">
-                 <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
-                   <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500">
-                     <AlertTriangle className="w-6 h-6" />
-                   </div>
-                   <h4 className="font-bold text-white mb-2">Lost Key</h4>
-                   <p className="text-sm text-gray-400">The most common reason. The unique removal key is missing from the car.</p>
-                 </div>
-                 <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
-                   <div className="w-12 h-12 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-500">
-                     <Lock className="w-6 h-6" />
-                   </div>
-                   <h4 className="font-bold text-white mb-2">Damaged Key</h4>
-                   <p className="text-sm text-gray-400">The pins in the key have sheared off or the pattern is worn.</p>
-                 </div>
-                 <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
-                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                     <Wrench className="w-6 h-6" />
-                   </div>
-                   <h4 className="font-bold text-white mb-2">Overtightened</h4>
-                   <p className="text-sm text-gray-400">Previous tyre fitter used an impact gun and the nut is seized.</p>
-                 </div>
-               </div>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">When Do You Need This Service?</h3>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
+                  <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500">
+                    <AlertTriangle className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Lost Key</h4>
+                  <p className="text-sm text-gray-400">The most common reason. The unique removal key is missing from the car.</p>
+                </div>
+                <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
+                  <div className="w-12 h-12 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-500">
+                    <Lock className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Damaged Key</h4>
+                  <p className="text-sm text-gray-400">The pins in the key have sheared off or the pattern is worn.</p>
+                </div>
+                <div className="bg-secondary/20 p-4 rounded border border-white/5 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                    <Wrench className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Overtightened</h4>
+                  <p className="text-sm text-gray-400">Previous tyre fitter used an impact gun and the nut is seized.</p>
+                </div>
+              </div>
             </section>
           </div>
 
           {/* Right Column */}
           <div className="space-y-8">
             <div className="bg-secondary p-8 rounded-lg border border-white/10 sticky top-24 text-center">
-               <Unlock className="w-16 h-16 text-primary mx-auto mb-6" />
-               <h3 className="text-xl font-bold text-white mb-4">Fixed Price Removal</h3>
-               <p className="text-sm text-gray-400 mb-6">
-                 We charge a fixed fee for removing locking wheel nuts. The price depends on the number of nuts (usually 4) and the complexity.
-               </p>
-               <div className="bg-white/5 p-4 rounded mb-6">
-                 <p className="text-white font-bold text-lg">From £80</p>
-                 <p className="text-xs text-gray-500">For all 4 wheels</p>
-               </div>
-               <a href="tel:07988018865">
-                 <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold uppercase">
-                   Get A Quote
-                 </Button>
-               </a>
+              <Unlock className="w-16 h-16 text-primary mx-auto mb-6" />
+              <h3 className="text-xl font-bold text-white mb-4">Fixed Price Removal</h3>
+              <p className="text-sm text-gray-400 mb-6">
+                We charge a fixed fee for removing locking wheel nuts. The price depends on the number of nuts (usually 4) and the complexity.
+              </p>
+              <div className="bg-white/5 p-4 rounded mb-6">
+                <p className="text-white font-bold text-lg">From £80</p>
+                <p className="text-xs text-gray-500">For all 4 wheels</p>
+              </div>
+              <a href="tel:07988018865">
+                <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold uppercase">
+                  Get A Quote
+                </Button>
+              </a>
             </div>
           </div>
 

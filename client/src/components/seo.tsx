@@ -10,16 +10,16 @@ interface SEOProps {
   schema?: Record<string, any>;
 }
 
-export function SEO({ 
-  title, 
-  description, 
-  keywords, 
-  image = "/og-image.png", 
+export function SEO({
+  title,
+  description,
+  keywords,
+  image = "/opengraph.jpg",
   type = "website",
-  schema 
+  schema
 }: SEOProps) {
   const [location] = useLocation();
-  const fullUrl = `https://www.queenswaymobiletyres.com${location}`;
+  const fullUrl = `https://www.queenswaymobiletyres.co.uk${location}`;
   const siteTitle = `${title} | Queensway Mobile Tyres`;
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function SEO({
 
     updateMeta("description", description);
     if (keywords) updateMeta("keywords", keywords);
-    
+
     // Open Graph
     updateMeta("og:title", siteTitle, "property");
     updateMeta("og:description", description, "property");

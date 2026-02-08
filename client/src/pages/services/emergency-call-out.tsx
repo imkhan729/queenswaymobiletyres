@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, AlertTriangle, Clock, ShieldAlert, MapPin, CheckCircle, Wrench } from "lucide-react";
-import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.png";
+import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.webp";
 import { Link } from "wouter";
 
 export default function EmergencyCallOut() {
@@ -23,7 +23,7 @@ export default function EmergencyCallOut() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="24/7 Emergency Mobile Tyre Fitting London | 60 Min Response"
         description="Stranded with a flat tyre? Our emergency mobile tyre fitting team reaches you in 30-60 mins. 24/7 roadside assistance across London & M25. Call 07988 018865."
         keywords="emergency tyre fitting, 24 hour mobile tyres, roadside tyre change, blown tyre help, emergency puncture repair, mobile tyre service night"
@@ -31,29 +31,29 @@ export default function EmergencyCallOut() {
         schema={schema}
       />
       <Navbar />
-      
+
       {/* Hero Section */}
       <div className="pt-24 pb-12 bg-red-950/30 relative overflow-hidden border-b border-red-900/30">
         <div className="absolute inset-0 z-0 opacity-20">
           <img src={heroImage} alt="Emergency Roadside Assistance London" className="w-full h-full object-cover grayscale" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/20 border border-red-500 text-red-500 mb-8 animate-pulse">
               <AlertTriangle className="w-5 h-5" />
               <span className="font-bold uppercase tracking-wider">24/7 Emergency Response Team Active</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6">
               EMERGENCY <span className="text-red-500">ROADSIDE ASSISTANCE</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
               Stranded with a flat tyre or blowout? Don't panic. Our emergency response team is on standby 24 hours a day to get you back on the road safely and quickly.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <a href="tel:07988018865">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-bold uppercase h-16 px-10 text-xl shadow-[0_0_30px_rgba(220,38,38,0.4)] w-full sm:w-auto">
@@ -66,7 +66,7 @@ export default function EmergencyCallOut() {
                 </Button>
               </a>
             </div>
-            
+
             <p className="mt-6 text-gray-400 font-medium flex items-center justify-center gap-2">
               <Clock className="w-4 h-4 text-red-500" /> Average Response Time: <span className="text-white">30-60 Minutes</span>
             </p>
@@ -77,17 +77,17 @@ export default function EmergencyCallOut() {
       {/* Main Content */}
       <div className="py-16 container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12">
-          
+
           {/* Left Column */}
           <div className="md:col-span-2 space-y-12">
             <section>
               <h2 className="text-3xl font-heading font-bold text-white mb-6">Don't Stay Stranded - We Come To You</h2>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                A tyre blowout or flat tyre can happen at the worst possible times - late at night, on a busy motorway, or when you're rushing to an important meeting. 
+                A tyre blowout or flat tyre can happen at the worst possible times - late at night, on a busy motorway, or when you're rushing to an important meeting.
                 Queensway Mobile Tyres offers a dedicated <strong>24/7 emergency tyre fitting service</strong> across London and the Home Counties.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Unlike standard breakdown services that might just tow you to a garage (which might be closed), we bring the solution to you. We carry a massive stock of tyres 
+                Unlike standard breakdown services that might just tow you to a garage (which might be closed), we bring the solution to you. We carry a massive stock of tyres
                 and have the equipment to fit them at the roadside, getting you mobile again immediately.
               </p>
             </section>
@@ -128,7 +128,7 @@ export default function EmergencyCallOut() {
               </p>
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  "Central London", "North London", "West London", 
+                  "Central London", "North London", "West London",
                   "Watford & Hertfordshire", "M1 (J1-J10)", "M25 (All Sectors)",
                   "A40 / M40 Corridor", "Heathrow Area", "Luton Airport Area"
                 ].map((area, i) => (
@@ -162,7 +162,7 @@ export default function EmergencyCallOut() {
                   <span className="text-white font-bold">Included</span>
                 </div>
               </div>
-              
+
               <div className="bg-red-900/20 p-4 rounded text-center mb-6 border border-red-500/30">
                 <p className="text-red-400 text-sm font-bold uppercase">No Hidden Costs</p>
                 <p className="text-gray-400 text-xs mt-1">We quote the full price before dispatching a van.</p>
