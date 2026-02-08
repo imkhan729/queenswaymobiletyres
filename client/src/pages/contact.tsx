@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Contact Us | Queensway Mobile Tyres"
-        description="Get in touch for mobile tyre fitting or emergency assistance. Call 07988 018865 or email us. 24/7 support available."
+        description="Get in touch for mobile tyre fitting or emergency assistance. Call 07427 515915 or email us. 24/7 support available."
         keywords="contact mobile tyres, tyre fitting phone number, emergency tyre contact"
       />
       <Navbar />
@@ -37,7 +37,11 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-white mb-1">Phone & WhatsApp</h3>
                 <p className="text-gray-400 mb-2">Available 24/7 for emergencies</p>
-                <a href="tel:07988018865" className="text-2xl font-bold text-primary hover:text-white transition-colors block">07988 018865</a>
+                <a href="tel:07427515915" className="text-2xl font-bold text-primary hover:text-white transition-colors block">07427 515915</a>
+                <div className="mt-2 flex items-center gap-2 text-gray-400">
+                  <span className="text-xs uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Alt</span>
+                  <a href="tel:07988018865" className="hover:text-primary transition-colors text-lg font-medium">07988 018865</a>
+                </div>
               </div>
             </div>
 

@@ -21,7 +21,7 @@ export function FloatingActionButtons() {
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
             {/* WhatsApp Button */}
             <a
-                href="https://wa.me/447988018865"
+                href="https://wa.me/447427515915"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 group ${isScrolled ? 'animate-bounce' : ''}`}
@@ -38,7 +38,7 @@ export function FloatingActionButtons() {
 
             {/* Phone Button */}
             <a
-                href="tel:07988018865"
+                href="tel:07427515915"
                 className={`w-14 h-14 bg-[#3B82F6] rounded-full flex items-center justify-center shadow-lg hover:bg-[#2563EB] hover:scale-110 transition-all duration-300 ${isScrolled ? 'animate-pulse ring-4 ring-blue-400/50' : ''}`}
                 aria-label="Call us"
             >

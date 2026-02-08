@@ -144,12 +144,15 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:07988018865">
-            <Button variant="default" className="bg-primary hover:bg-primary/90 text-black font-bold uppercase tracking-wide">
-              <Phone className="w-4 h-4 mr-2" />
-              07988 018865
-            </Button>
-          </a>
+          <div className="flex flex-col items-end">
+            <a href="tel:07427515915">
+              <Button variant="default" className="bg-primary hover:bg-primary/90 text-black font-bold uppercase tracking-wide">
+                <Phone className="w-4 h-4 mr-2" />
+                07427 515915
+              </Button>
+            </a>
+            <span className="text-[10px] text-gray-500 mt-1 uppercase tracking-tighter">Secondary: 07988 018865</span>
+          </div>
         </div>
 
         {/* Mobile Nav */}
@@ -179,11 +182,18 @@ export function Navbar() {
                 </div>
                 <Link href="/blog"><a className="text-xl font-heading font-bold text-white hover:text-primary">Blog</a></Link>
                 <Link href="/contact"><a className="text-xl font-heading font-bold text-white hover:text-primary">Contact</a></Link>
-                <a href="tel:07988018865">
-                  <Button className="w-full bg-primary text-black font-bold uppercase mt-4">
-                    Call Now
-                  </Button>
-                </a>
+                <div className="flex flex-col gap-3 mt-4">
+                  <a href="tel:07427515915" className="w-full">
+                    <Button className="w-full bg-primary text-black font-bold uppercase">
+                      Call 07427 515915
+                    </Button>
+                  </a>
+                  <a href="tel:07988018865" className="w-full">
+                    <Button variant="outline" className="w-full border-white/20 text-white font-bold uppercase">
+                      Alt: 07988 018865
+                    </Button>
+                  </a>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

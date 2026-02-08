@@ -13,7 +13,7 @@ export default function NorthamptonLocation() {
         "name": "Queensway Mobile Tyres Northampton",
         "description": "Expert mobile tyre fitting in Northampton. We come to you at home or work. 24/7 service in NN1, NN2, NN3, NN4, NN5.",
         "areaServed": { "@type": "City", "name": "Northampton" },
-        "provider": { "@type": "LocalBusiness", "name": "Queensway Mobile Tyres", "telephone": "07988 018865" }
+        "provider": { "@type": "LocalBusiness", "name": "Queensway Mobile Tyres", "telephone": "07427 515915" }
     };
 
     return (
@@ -26,7 +26,7 @@ export default function NorthamptonLocation() {
                     <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">NORTHAMPTON</span></h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Professional mobile tyre services across Northamptonshire and the M1.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07988018865"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07988 018865</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
                         <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function NorthamptonLocation() {
                 </div>
                 <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl font-bold text-white mb-4">Tyre Problems in Northampton?</h2>
-                    <a href="tel:07988018865"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">Call 07988 018865</Button></a>
+                    <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">Call 07427 515915</Button></a>
                 </div>
             </div>
             <Footer />

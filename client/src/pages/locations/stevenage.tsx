@@ -13,7 +13,7 @@ export default function StevenageLocation() {
         "name": "Queensway Mobile Tyres Stevenage",
         "description": "Expert mobile tyre fitting in Stevenage. We cover SG1, SG2 and A1(M) corridor. 24/7 service.",
         "areaServed": { "@type": "City", "name": "Stevenage" },
-        "provider": { "@type": "LocalBusiness", "name": "Queensway Mobile Tyres", "telephone": "07988 018865" }
+        "provider": { "@type": "LocalBusiness", "name": "Queensway Mobile Tyres", "telephone": "07427 515915" }
     };
 
     return (
@@ -26,7 +26,7 @@ export default function StevenageLocation() {
                     <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">STEVENAGE</span></h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Rapid response tyre fitting in Stevenage and along the A1(M).</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07988018865"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07988 018865</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
                         <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
                     </div>
                 </div>

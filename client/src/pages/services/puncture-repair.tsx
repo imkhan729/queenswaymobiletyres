@@ -15,7 +15,7 @@ export default function PunctureRepair() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Queensway Mobile Tyres",
-      "telephone": "07988 018865",
+      "telephone": "07427 515915",
       "priceRange": "$"
     },
     "description": "Safe and permanent mobile puncture repair service. BS AU 159 compliant repairs at your location."
@@ -47,9 +47,12 @@ export default function PunctureRepair() {
               Save money and reduce waste with our expert mobile repair service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                <Phone className="mr-2 w-5 h-5" /> Repair My Tyre: 07988 018865
-              </Button>
+              <div className="flex flex-col">
+                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                  <Phone className="mr-2 w-5 h-5" /> Repair My Tyre: 07427 515915
+                </Button>
+                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
+              </div>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
                   Online Enquiry
@@ -160,7 +163,7 @@ export default function PunctureRepair() {
               <p className="text-gray-400 mb-6 text-sm">
                 Send us a photo of the damage on WhatsApp and we can give you an instant assessment.
               </p>
-              <a href="https://wa.me/447988018865" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold h-12 uppercase">
                   WhatsApp Photo
                 </Button>

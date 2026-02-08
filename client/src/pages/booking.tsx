@@ -22,7 +22,7 @@ export default function Booking() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -36,13 +36,13 @@ export default function Booking() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Book Online | Queensway Mobile Tyres"
         description="Book your mobile tyre fitting, puncture repair or battery replacement online. Fast, easy and convenient booking for London & Hertfordshire."
         keywords="book mobile tyres online, tyre fitting appointment, schedule tyre change"
       />
       <Navbar />
-      
+
       <div className="pt-24 pb-12 bg-secondary border-b border-white/5">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4">
@@ -56,13 +56,13 @@ export default function Booking() {
 
       <div className="py-12 container mx-auto px-4">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-          
+
           {/* Booking Form */}
           <div className="md:col-span-2 bg-secondary/30 p-6 md:p-8 rounded-lg border border-white/10">
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
               <Car className="text-primary w-6 h-6" /> Vehicle & Service Details
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -81,17 +81,17 @@ export default function Booking() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 <div className="space-y-2">
-                   <Label htmlFor="reg">Vehicle Registration</Label>
-                   <Input id="reg" placeholder="e.g. AB12 CDE" className="bg-background/50 border-white/10 uppercase" required />
+                  <Label htmlFor="reg">Vehicle Registration</Label>
+                  <Input id="reg" placeholder="e.g. AB12 CDE" className="bg-background/50 border-white/10 uppercase" required />
                 </div>
               </div>
 
               <div className="space-y-2">
-                 <Label htmlFor="tyre-size">Tyre Size (if known)</Label>
-                 <Input id="tyre-size" placeholder="e.g. 205/55 R16 91V" className="bg-background/50 border-white/10" />
-                 <p className="text-xs text-gray-500">You can find this on the sidewall of your current tyres.</p>
+                <Label htmlFor="tyre-size">Tyre Size (if known)</Label>
+                <Input id="tyre-size" placeholder="e.g. 205/55 R16 91V" className="bg-background/50 border-white/10" />
+                <p className="text-xs text-gray-500">You can find this on the sidewall of your current tyres.</p>
               </div>
 
               <div className="space-y-2">
@@ -122,35 +122,35 @@ export default function Booking() {
               </div>
 
               <div className="border-t border-white/10 pt-6">
-                 <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                   <MapPin className="text-primary w-6 h-6" /> Location & Contact
-                 </h2>
-                 
-                 <div className="grid md:grid-cols-2 gap-6 mb-4">
-                   <div className="space-y-2">
-                     <Label htmlFor="postcode">Postcode</Label>
-                     <Input id="postcode" placeholder="e.g. WD17 1AA" className="bg-background/50 border-white/10 uppercase" required />
-                   </div>
-                   <div className="space-y-2">
-                     <Label htmlFor="phone">Phone Number</Label>
-                     <Input id="phone" type="tel" placeholder="07xxx xxxxxx" className="bg-background/50 border-white/10" required />
-                   </div>
-                 </div>
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                  <MapPin className="text-primary w-6 h-6" /> Location & Contact
+                </h2>
 
-                 <div className="space-y-2 mb-4">
-                   <Label htmlFor="address">Full Address</Label>
-                   <Input id="address" placeholder="House number and street name" className="bg-background/50 border-white/10" required />
-                 </div>
-                 
-                 <div className="space-y-2 mb-4">
-                   <Label htmlFor="name">Your Name</Label>
-                   <Input id="name" placeholder="Full Name" className="bg-background/50 border-white/10" required />
-                 </div>
+                <div className="grid md:grid-cols-2 gap-6 mb-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="postcode">Postcode</Label>
+                    <Input id="postcode" placeholder="e.g. WD17 1AA" className="bg-background/50 border-white/10 uppercase" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input id="phone" type="tel" placeholder="07xxx xxxxxx" className="bg-background/50 border-white/10" required />
+                  </div>
+                </div>
 
-                 <div className="space-y-2">
-                   <Label htmlFor="notes">Additional Notes</Label>
-                   <Textarea id="notes" placeholder="Any special instructions or details about the location..." className="bg-background/50 border-white/10" />
-                 </div>
+                <div className="space-y-2 mb-4">
+                  <Label htmlFor="address">Full Address</Label>
+                  <Input id="address" placeholder="House number and street name" className="bg-background/50 border-white/10" required />
+                </div>
+
+                <div className="space-y-2 mb-4">
+                  <Label htmlFor="name">Your Name</Label>
+                  <Input id="name" placeholder="Full Name" className="bg-background/50 border-white/10" required />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="notes">Additional Notes</Label>
+                  <Textarea id="notes" placeholder="Any special instructions or details about the location..." className="bg-background/50 border-white/10" />
+                </div>
               </div>
 
               <Button type="submit" className="w-full bg-primary text-black font-bold uppercase h-14 text-lg hover:bg-primary/90" disabled={isSubmitting}>
@@ -177,11 +177,14 @@ export default function Booking() {
               <p className="text-gray-300 text-sm mb-4">
                 For emergency call-outs or same-day service, it's faster to call us directly.
               </p>
-              <a href="tel:07988018865">
+              <a href="tel:07427515915">
                 <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-black font-bold">
-                  Call 07988 018865
+                  Call 07427 515915
                 </Button>
               </a>
+              <div className="mt-4 pt-4 border-t border-primary/10">
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest text-center">Secondary line: 07988 018865</p>
+              </div>
             </div>
 
             <div className="bg-secondary p-6 rounded-lg border border-white/10">
@@ -191,11 +194,11 @@ export default function Booking() {
                   <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>Secure your preferred time slot in advance</span>
                 </li>
-                 <li className="flex gap-3 text-sm text-gray-400">
+                <li className="flex gap-3 text-sm text-gray-400">
                   <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>Get a detailed written quote before work begins</span>
                 </li>
-                 <li className="flex gap-3 text-sm text-gray-400">
+                <li className="flex gap-3 text-sm text-gray-400">
                   <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>Convenient - no need to wait on hold</span>
                 </li>

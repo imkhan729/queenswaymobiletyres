@@ -15,7 +15,7 @@ export default function BatteryReplacement() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Queensway Mobile Tyres",
-      "telephone": "07988 018865",
+      "telephone": "07427 515915",
       "priceRange": "$$"
     },
     "areaServed": "London",
@@ -26,7 +26,7 @@ export default function BatteryReplacement() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Mobile Car Battery Replacement London | We Come To You"
-        description="Car won't start? Expert mobile car battery replacement at your home or work. We supply & fit heavy-duty batteries for all makes/models. Call 07988 018865."
+        description="Car won't start? Expert mobile car battery replacement at your home or work. We supply & fit heavy-duty batteries for all makes/models. Call 07427 515915."
         keywords="car battery replacement, mobile battery fitting, jump start london, new car battery, battery dead, alternator test, mobile mechanic battery"
         image={heroImage}
         schema={schema}
@@ -48,9 +48,12 @@ export default function BatteryReplacement() {
               Our expert technicians supply and fit batteries for all vehicle makes and models at your home, work, or roadside.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                <Phone className="mr-2 w-5 h-5" /> Call for Battery: 07988 018865
-              </Button>
+              <div className="flex flex-col">
+                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                  <Phone className="mr-2 w-5 h-5" /> Call for Battery: 07427 515915
+                </Button>
+                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
+              </div>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
                   Get a Quote
@@ -148,7 +151,7 @@ export default function BatteryReplacement() {
               <p className="text-gray-400 mb-6 text-sm">
                 If your battery is just flat from leaving lights on, we offer a cheaper jump-start service to get you moving again.
               </p>
-              <a href="tel:07988018865">
+              <a href="tel:07427515915">
                 <Button className="w-full bg-primary text-black hover:bg-primary/90 font-bold h-12 uppercase">
                   Call for Assistance
                 </Button>

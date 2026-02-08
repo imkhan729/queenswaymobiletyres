@@ -185,9 +185,11 @@ export default function Locations() {
           <p className="text-gray-300 mb-6">
             We cover many surrounding villages and areas along the M1 and M25 motorways. Give us a call to check if we can reach you.
           </p>
-          <Button size="lg" className="bg-primary text-black font-bold uppercase">
-            <Phone className="mr-2 w-5 h-5" /> Call to Check: 07988 018865
-          </Button>
+          <a href="tel:07427515915">
+            <Button size="lg" className="bg-primary text-black font-bold uppercase">
+              <Phone className="mr-2 w-5 h-5" /> Call to Check: 07427 515915
+            </Button>
+          </a>
         </div>
       </div>
       <Footer />

@@ -19,7 +19,7 @@ export default function LondonLocation() {
         "provider": {
             "@type": "LocalBusiness",
             "name": "Queensway Mobile Tyres",
-            "telephone": "07988 018865"
+            "telephone": "07427 515915"
         }
     };
 
@@ -47,9 +47,9 @@ export default function LondonLocation() {
                         The #1 choice for mobile tyre fitting in North & North West London. We bring the tyre shop to you.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07988018865">
+                        <a href="tel:07427515915">
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
-                                <Phone className="mr-2 w-5 h-5" /> Call 07988 018865
+                                <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>
                         </a>
                         <Link href="/booking">

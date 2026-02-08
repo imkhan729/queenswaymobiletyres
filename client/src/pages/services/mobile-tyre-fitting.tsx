@@ -15,7 +15,7 @@ export default function MobileTyreFitting() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Queensway Mobile Tyres",
-      "telephone": "07988 018865",
+      "telephone": "07427 515915",
       "priceRange": "$$"
     },
     "areaServed": {
@@ -57,9 +57,12 @@ export default function MobileTyreFitting() {
               No more waiting in cold garages or disrupting your busy schedule. Our expert technicians fit your new tyres while you relax or continue working.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                <Phone className="mr-2 w-5 h-5" /> Book Now: 07988 018865
-              </Button>
+              <div className="flex flex-col">
+                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                  <Phone className="mr-2 w-5 h-5" /> Book Now: 07427 515915
+                </Button>
+                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
+              </div>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
                   Get a Quote Online
@@ -206,16 +209,17 @@ export default function MobileTyreFitting() {
               <div className="bg-primary p-6 rounded-lg text-black text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2 uppercase">Need Tyres Today?</h3>
                 <p className="mb-6 font-medium">We often have same-day appointments available!</p>
-                <a href="tel:07988018865">
+                <a href="tel:07427515915">
                   <Button className="w-full bg-black text-white hover:bg-gray-800 font-bold h-12 uppercase mb-3">
-                    Call 07988 018865
+                    Call 07427 515915
                   </Button>
                 </a>
-                <a href="https://wa.me/447988018865" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full border-black text-black hover:bg-black/10 font-bold h-12 uppercase">
                     WhatsApp Us
                   </Button>
                 </a>
+                <p className="mt-3 text-[10px] text-black/60 uppercase tracking-widest font-bold">Alt: 07988 018865</p>
               </div>
 
               {/* Trust Signals */}

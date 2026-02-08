@@ -90,9 +90,11 @@ export default function About() {
           <p className="text-lg mb-8 max-w-2xl mx-auto font-medium">
             Join thousands of satisfied customers who have switched to mobile tyre fitting.
           </p>
-          <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold uppercase h-14 px-8 text-lg">
-            <Phone className="mr-2 w-5 h-5" /> Contact Us Today
-          </Button>
+          <a href="tel:07427515915">
+            <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold uppercase h-14 px-8 text-lg">
+              <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
+            </Button>
+          </a>
         </div>
       </div>
       <Footer />

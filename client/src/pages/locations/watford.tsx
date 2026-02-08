@@ -19,7 +19,7 @@ export default function WatfordLocation() {
         "provider": {
             "@type": "LocalBusiness",
             "name": "Queensway Mobile Tyres",
-            "telephone": "07988 018865"
+            "telephone": "07427 515915"
         }
     };
 
@@ -47,9 +47,9 @@ export default function WatfordLocation() {
                         The leading mobile tyre service in Watford. We bring the garage to your driveway, workplace, or roadside 24 hours a day.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07988018865">
+                        <a href="tel:07427515915">
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
-                                <Phone className="mr-2 w-5 h-5" /> Call 07988 018865
+                                <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>
                         </a>
                         <Link href="/booking">
@@ -171,7 +171,7 @@ export default function WatfordLocation() {
                         Get a quote instantly or call our emergency line. We are open 24 hours a day, 7 days a week.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07988018865">
+                        <a href="tel:07427515915">
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
                                 Call Now
                             </Button>

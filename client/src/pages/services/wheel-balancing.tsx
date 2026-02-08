@@ -15,7 +15,7 @@ export default function WheelBalancing() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Queensway Mobile Tyres",
-      "telephone": "07988 018865",
+      "telephone": "07427 515915",
       "priceRange": "$$"
     },
     "areaServed": "London",
@@ -48,9 +48,12 @@ export default function WheelBalancing() {
               We bring precision digital wheel balancing equipment directly to your driveway or workplace.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                <Phone className="mr-2 w-5 h-5" /> Book Now: 07988 018865
-              </Button>
+              <div className="flex flex-col">
+                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                  <Phone className="mr-2 w-5 h-5" /> Book Now: 07427 515915
+                </Button>
+                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
+              </div>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 px-8 uppercase w-full sm:w-auto">
                   Get a Quote
@@ -145,7 +148,7 @@ export default function WheelBalancing() {
                   <strong>Alignment</strong> (Tracking) fixes the car pulling to one side.<br /><br />
                   We focus on balancing to ensure your tyres roll smoothly and last longer.
                 </p>
-                <a href="tel:07988018865">
+                <a href="tel:07427515915">
                   <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold uppercase">
                     Book Balancing
                   </Button>
