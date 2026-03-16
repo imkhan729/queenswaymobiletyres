@@ -213,7 +213,6 @@ export default function LockingNutRemoval() {
           </div>
 
         </div>
-      </div>
       <Footer />
     </div>
   );

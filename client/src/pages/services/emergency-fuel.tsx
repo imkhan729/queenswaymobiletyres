@@ -194,7 +194,6 @@ export default function EmergencyFuel() {
           </div>
 
         </div>
-      </div>
       <Footer />
     </div>
   );
