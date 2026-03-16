@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock, Truck, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, Clock, Truck, ShieldCheck, Wrench, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 
@@ -104,6 +104,40 @@ export default function HemelHempsteadLocation() {
                     </div>
                 </div>
 
+                {/* Services in Hemel */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-6">All Mobile Services in Hemel Hempstead</h2>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                        As our <strong>home base in Hertfordshire</strong>, Hemel Hempstead benefits from our fastest response times and largest stock of tyres. We cover HP1, HP2, and HP3 postcodes comprehensively, with premium brands (Michelin, Continental, Pirelli, Bridgestone) and budget options (Nexen, Avon) in stock.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        {[
+                            { icon: Truck, label: "Mobile Tyre Fitting Hemel Hempstead", desc: "Same-day supply & fit in HP1, HP2, HP3 — fastest response from our local base.", href: "/mobile-tyre-fitting" },
+                            { icon: Clock, label: "24/7 Emergency Call-Out Hemel Hempstead", desc: "M1 breakdown or flat at home — we prioritise Hemel calls as our local area.", href: "/emergency-call-out" },
+                            { icon: Wrench, label: "Puncture Repair Hemel Hempstead", desc: "BS AU 159 compliant permanent repairs. Cheaper than a new tyre when repairable.", href: "/puncture-repair" },
+                            { icon: Settings, label: "Wheel Balancing Hemel Hempstead", desc: "Digital balancing at your driveway — stops vibration, extends tyre life.", href: "/wheel-balancing" },
+                            { icon: Battery, label: "Battery Replacement Hemel Hempstead", desc: "AGM, EFB & standard batteries fitted at your location — all makes and models.", href: "/battery-replacement" },
+                            { icon: Fuel, label: "Emergency Fuel Delivery Hemel Hempstead", desc: "Run dry in HP1-HP3? We deliver petrol or diesel to get you moving.", href: "/emergency-fuel" },
+                            { icon: Lock, label: "Locking Nut Removal Hemel Hempstead", desc: "Lost your locking nut key in Hemel? We remove safely — no alloy damage.", href: "/locking-nut-removal" },
+                        ].map(s => (
+                            <Link key={s.href} href={s.href}>
+                                <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/50 rounded-lg group transition-all cursor-pointer">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors mt-0.5">
+                                            <s.icon className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{s.label}</p>
+                                            <p className="text-gray-500 text-xs mt-0.5">{s.desc}</p>
+                                        </div>
+                                    </div>
+                                    <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0 ml-2" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Why Choose Us */}
                 <div className="mb-16">
                     <h2 className="text-3xl font-heading font-bold text-white text-center mb-12">The Smart Choice for Hemel Drivers</h2>
@@ -131,6 +165,54 @@ export default function HemelHempsteadLocation() {
                         </div>
                     </div>
                 </div>
+                {/* FAQ */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-8">Frequently Asked Questions — Hemel Hempstead</h2>
+                    <div className="space-y-5">
+                        {[
+                            {
+                                q: "How quickly can you reach me in Hemel Hempstead?",
+                                a: "Hemel Hempstead is our home base, so we have the fastest response times here. For emergency call-outs within HP1–HP3, we typically arrive within 20–40 minutes. For pre-booked fittings, we offer same-day or next-morning appointments."
+                            },
+                            {
+                                q: "Do you cover Apsley, Boxmoor, and Adeyfield?",
+                                a: "Yes — we cover the entire Hemel Hempstead area including Boxmoor, Apsley, Nash Mills, Bennetts End, Adeyfield, Chaulden, Gadebridge, Warner's End, Leverstock Green, and surrounding villages."
+                            },
+                            {
+                                q: "Can you help with a blowout on the M1 near Hemel?",
+                                a: "Yes. We provide priority M1 emergency coverage between Junctions 7 (M1/A414) and 9 (Dunstable Road). If you break down, move to the hard shoulder, turn on hazard lights, and call us on 07427 515915."
+                            },
+                            {
+                                q: "What tyre brands do you stock for Hemel customers?",
+                                a: "As our home base we carry the widest stock here — premium (Michelin, Continental, Pirelli, Bridgestone, Goodyear, Dunlop), mid-range (Hankook, Yokohama, Toyo), and budget (Nexen, Avon). All-season, run-flat, and XL tyres also available."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-secondary/30 p-6 rounded-lg border border-white/5">
+                                <h3 className="text-lg font-bold text-white mb-2">{faq.q}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Nearby Locations */}
+                <div className="mb-12 border-t border-white/10 pt-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Nearby Areas We Also Cover</h3>
+                    <div className="flex flex-wrap gap-3">
+                        <Link href="/locations/watford" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Watford</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/st-albans" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres St Albans</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/luton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Luton</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/northampton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Northampton</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/milton-keynes" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Milton Keynes</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations" className="text-primary hover:text-white hover:underline text-sm font-bold">View All Locations</Link>
+                    </div>
+                </div>
+
             </div>
             <Footer />
         </div>

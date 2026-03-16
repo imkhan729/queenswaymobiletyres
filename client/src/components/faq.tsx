@@ -13,7 +13,7 @@ export function FAQ() {
     },
     {
       question: "How quickly can you get to me for an emergency tyre change?",
-      answer: "For emergency call-outs in London and surrounding areas (M1/M25 corridors), we aim to be with you within 30-60 minutes. Our vans are strategically located to ensure the fastest possible response time."
+      answer: "For emergency call-outs within our 40-mile radius (including Hemel Hempstead, Watford, St Albans, Luton & Aylesbury), we aim to be with you within 30-60 minutes. Our vans are strategically located to ensure the fastest possible response time."
     },
     {
       question: "Do I need to be with the car while you change the tyres?",

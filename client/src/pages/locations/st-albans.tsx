@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock, Truck, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, Clock, Truck, ShieldCheck, Wrench, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.webp";
 
@@ -130,17 +130,99 @@ export default function StAlbansLocation() {
                     </div>
                 </div>
 
+                {/* Services */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-6">All Services Available in St Albans</h2>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                        From the <strong>St Albans Cathedral area in AL1</strong> to <strong>London Colney</strong> and <strong>Harpenden</strong>, our mobile service covers the full AL postcode area. We stock Michelin, Continental, and Pirelli alongside quality budget brands — all available same-day.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        {[
+                            { icon: Truck, label: "Mobile Tyre Fitting St Albans", desc: "Same-day supply & fit in AL1, AL2, AL3, AL4 and surrounding villages.", href: "/mobile-tyre-fitting" },
+                            { icon: Clock, label: "24/7 Emergency Call-Out St Albans", desc: "Breakdown on the A414 or M10? Our emergency team responds around the clock.", href: "/emergency-call-out" },
+                            { icon: Wrench, label: "Puncture Repair St Albans", desc: "Permanent BS AU 159 compliant repairs at your home or roadside in St Albans.", href: "/puncture-repair" },
+                            { icon: Settings, label: "Wheel Balancing St Albans", desc: "Digital balancing included with every new tyre — we come to your driveway.", href: "/wheel-balancing" },
+                            { icon: Battery, label: "Battery Replacement St Albans", desc: "Dead battery in St Albans? We supply and fit the right battery on-site.", href: "/battery-replacement" },
+                            { icon: Lock, label: "Locking Nut Removal St Albans", desc: "Lost your locking wheel nut key in AL postcodes? We remove safely.", href: "/locking-nut-removal" },
+                        ].map(s => (
+                            <Link key={s.href} href={s.href}>
+                                <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/50 rounded-lg group transition-all cursor-pointer">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors mt-0.5">
+                                            <s.icon className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{s.label}</p>
+                                            <p className="text-gray-500 text-xs mt-0.5">{s.desc}</p>
+                                        </div>
+                                    </div>
+                                    <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0 ml-2" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* FAQ */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-8">Frequently Asked Questions — St Albans</h2>
+                    <div className="space-y-5">
+                        {[
+                            {
+                                q: "Can you fit tyres in St Albans city centre?",
+                                a: "Yes. We regularly service St Albans city centre — including the Civic Centre car park and surrounding streets. If you can't park on your road, we can often meet you at a nearby car park."
+                            },
+                            {
+                                q: "Do you cover London Colney and Harpenden?",
+                                a: "Absolutely. Our St Albans coverage extends to London Colney (AL2), Harpenden (AL5), Park Street (AL2), Bricket Wood, Wheathampstead, and all surrounding villages in the AL postcode area."
+                            },
+                            {
+                                q: "Can you help on the A414 between St Albans and Hemel?",
+                                a: "Yes — the A414 is one of our priority emergency routes. If you suffer a blowout or flat between St Albans and Hemel Hempstead, we can typically reach you within 25–35 minutes."
+                            },
+                            {
+                                q: "Do you supply run-flat tyres in St Albans?",
+                                a: "Yes. We carry run-flat tyres from Michelin, Continental, and Bridgestone — popular for BMW, Mini, and Mercedes vehicles common in the St Albans area. We also advise on whether a run-flat can be repaired or must be replaced."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-secondary/30 p-6 rounded-lg border border-white/5">
+                                <h3 className="text-lg font-bold text-white mb-2">{faq.q}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Nearby Locations */}
+                <div className="mb-12 border-t border-white/10 pt-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Nearby Areas We Also Cover</h3>
+                    <div className="flex flex-wrap gap-3">
+                        <Link href="/locations/hemel-hempstead" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Hemel Hempstead</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/watford" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Watford</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/luton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Luton</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/stevenage" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Stevenage</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations" className="text-primary hover:text-white hover:underline text-sm font-bold">View All Locations</Link>
+                    </div>
+                </div>
+
                 {/* CTA */}
                 <div className="bg-gradient-to-r from-secondary to-background border-t border-b border-white/10 py-16 text-center">
                     <h2 className="text-3xl font-bold text-white mb-4">Tyre Trouble in St Albans?</h2>
                     <p className="text-gray-300 mb-8 text-lg max-w-2xl mx-auto">
-                        Don't let a flat tyre ruin your day. Contact Queensway Mobile Tyres for immediate assistance.
+                        Don't let a flat tyre ruin your day. Contact Queensway Mobile Tyres for immediate assistance in St Albans and AL postcodes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="tel:07427515915">
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
                                 Call 07427 515915
                             </Button>
+                        </a>
+                        <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase w-full sm:w-auto">WhatsApp Us</Button>
                         </a>
                     </div>
                 </div>

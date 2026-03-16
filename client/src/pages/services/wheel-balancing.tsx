@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle, Settings, RotateCw, ShieldCheck, Zap, Gauge } from "lucide-react";
+import { Phone, CheckCircle, Settings, RotateCw, ShieldCheck, Zap, Gauge, MapPin, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/digital_wheel_balancer_screen.webp";
 import wheelImage from "@assets/generated_images/close_up_of_car_tyre_tread.webp"; // Reusing generic tread/wheel image or similar
 import { Link } from "wouter";
@@ -111,6 +111,54 @@ export default function WheelBalancing() {
                       <p className="text-gray-400 text-sm">{item.desc}</p>
                     </div>
                   </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Areas */}
+            <section className="bg-primary/5 p-8 rounded-lg border border-primary/10">
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Wheel Balancing Service Areas</h3>
+              <p className="text-gray-400 mb-4 text-sm">Our mobile balancing units serve the full 40-mile radius from our Hemel Hempstead base. Wheel balancing is included free with every new tyre fitting:</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {[
+                  { name: "Hemel Hempstead", href: "/locations/hemel-hempstead" },
+                  { name: "Watford", href: "/locations/watford" },
+                  { name: "St Albans", href: "/locations/st-albans" },
+                  { name: "Luton", href: "/locations/luton" },
+                  { name: "Harrow", href: "/locations/harrow" },
+                  { name: "Slough", href: "/locations/slough" },
+                  { name: "Milton Keynes", href: "/locations/milton-keynes" },
+                  { name: "North London", href: "/locations/london" },
+                ].map(area => (
+                  <Link key={area.name} href={area.href} className="px-3 py-1 bg-background rounded-full text-sm text-gray-300 border border-white/10 hover:border-primary/40 hover:text-primary flex items-center gap-1 transition-colors">
+                    <MapPin className="w-3 h-3 text-primary" /> {area.name}
+                  </Link>
+                ))}
+              </div>
+              <Link href="/locations" className="text-primary hover:underline text-sm font-bold">See full coverage area →</Link>
+            </section>
+
+            {/* Related Services */}
+            <section className="bg-secondary/20 p-8 rounded-lg border border-white/5">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Our Other Mobile Services</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyre Fitting", sub: "Supply & fit at your home, work or roadside", href: "/mobile-tyre-fitting" },
+                  { label: "24/7 Emergency Call-Out", sub: "Rapid response — we come to you in 30–60 mins", href: "/emergency-call-out" },
+                  { label: "Puncture Repair", sub: "Permanent BS AU 159 compliant repairs", href: "/puncture-repair" },
+                  { label: "Car Battery Replacement", sub: "All battery types — AGM, EFB, standard", href: "/battery-replacement" },
+                  { label: "Emergency Fuel Delivery", sub: "Petrol or diesel delivered 24/7", href: "/emergency-fuel" },
+                  { label: "Locking Wheel Nut Removal", sub: "Safe removal without alloy damage", href: "/locking-nut-removal" },
+                ].map(s => (
+                  <Link key={s.href} href={s.href}>
+                    <div className="flex items-center justify-between p-3 bg-background/40 border border-white/5 hover:border-primary/30 rounded group transition-all cursor-pointer">
+                      <div>
+                        <p className="text-white text-sm font-bold group-hover:text-primary transition-colors">{s.label}</p>
+                        <p className="text-gray-500 text-xs">{s.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </div>
+                  </Link>
                 ))}
               </div>
             </section>

@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock, Truck, ShieldCheck, Star } from "lucide-react";
+import { MapPin, Phone, Clock, Truck, ShieldCheck, Star, Wrench, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 
@@ -100,6 +100,40 @@ export default function WatfordLocation() {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </div>
+
+                {/* Services in Watford */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-6">All Mobile Services in Watford</h2>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                        Watford drivers benefit from our full range of mobile automotive services across all WD postcodes. We stock premium brands (Michelin, Continental, Pirelli) and budget tyres — all available for same-day fitting at your Watford home or workplace.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        {[
+                            { icon: Truck, label: "Mobile Tyre Fitting Watford", desc: "Same-day supply & fit in WD17, WD18, WD19, WD24, WD25 and surrounding areas.", href: "/mobile-tyre-fitting" },
+                            { icon: Clock, label: "24/7 Emergency Call-Out Watford", desc: "Blowout near the M1 or M25? Our emergency team reaches WD postcodes fast.", href: "/emergency-call-out" },
+                            { icon: Wrench, label: "Puncture Repair Watford", desc: "Permanent BS AU 159 compliant repairs — cheaper than a new tyre when possible.", href: "/puncture-repair" },
+                            { icon: Settings, label: "Wheel Balancing Watford", desc: "Stop steering vibration. Digital balancing included with every new fitting.", href: "/wheel-balancing" },
+                            { icon: Battery, label: "Battery Replacement Watford", desc: "Car won't start in Watford? We supply & fit AGM, EFB & standard batteries.", href: "/battery-replacement" },
+                            { icon: Fuel, label: "Emergency Fuel Delivery Watford", desc: "Run dry near Watford? Petrol or diesel delivered to your location 24/7.", href: "/emergency-fuel" },
+                            { icon: Lock, label: "Locking Nut Removal Watford", desc: "Lost your locking wheel nut key in Watford? Specialist removal guaranteed.", href: "/locking-nut-removal" },
+                        ].map(s => (
+                            <Link key={s.href} href={s.href}>
+                                <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/50 rounded-lg group transition-all cursor-pointer">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors mt-0.5">
+                                            <s.icon className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{s.label}</p>
+                                            <p className="text-gray-500 text-xs mt-0.5">{s.desc}</p>
+                                        </div>
+                                    </div>
+                                    <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0 ml-2" />
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
 

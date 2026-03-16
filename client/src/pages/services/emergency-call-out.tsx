@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, AlertTriangle, Clock, ShieldAlert, MapPin, CheckCircle, Wrench } from "lucide-react";
+import { Phone, AlertTriangle, Clock, ShieldAlert, MapPin, CheckCircle, Wrench, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.webp";
 import { Link } from "wouter";
 
@@ -123,21 +123,55 @@ export default function EmergencyCallOut() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-heading font-bold text-white mb-6">Areas We Serve 24/7</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Emergency Coverage Areas — 24/7</h3>
               <p className="text-gray-400 mb-4">
-                Our emergency fleet is strategically positioned around the M25 and major London routes to ensure rapid response times. We cover:
+                Our emergency fleet is strategically positioned around the M25, M1, and major London routes. We respond to breakdowns along motorways, A-roads, and residential streets. Current priority coverage includes:
               </p>
-              <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
                 {[
-                  "Central London", "North London", "West London",
-                  "Watford & Hertfordshire", "M1 (J1-J10)", "M25 (All Sectors)",
-                  "A40 / M40 Corridor", "Heathrow Area", "Luton Airport Area"
-                ].map((area, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-red-500" /> {area}
-                  </li>
+                  { name: "Hemel Hempstead", href: "/locations/hemel-hempstead" },
+                  { name: "Watford", href: "/locations/watford" },
+                  { name: "St Albans", href: "/locations/st-albans" },
+                  { name: "Luton Airport Area", href: "/locations/luton" },
+                  { name: "Harrow", href: "/locations/harrow" },
+                  { name: "Slough & M4", href: "/locations/slough" },
+                  { name: "Milton Keynes", href: "/locations/milton-keynes" },
+                  { name: "North London", href: "/locations/london" },
+                  { name: "Northampton", href: "/locations/northampton" },
+                ].map((area) => (
+                  <Link key={area.name} href={area.href} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+                    <CheckCircle className="w-4 h-4 text-red-500 flex-shrink-0" /> {area.name}
+                  </Link>
                 ))}
-              </ul>
+              </div>
+              <p className="text-gray-400 text-sm">
+                We also cover the <strong className="text-white">M1 (Junctions 4–11)</strong>, <strong className="text-white">M25 (Junctions 17–25)</strong>, <strong className="text-white">A41</strong>, and <strong className="text-white">A1(M)</strong> corridors. <Link href="/locations" className="text-primary hover:underline">View all coverage areas →</Link>
+              </p>
+            </section>
+
+            {/* Related Services */}
+            <section className="bg-secondary/20 p-8 rounded-lg border border-white/5">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Our Other Mobile Services</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyre Fitting", sub: "Scheduled same-day tyre supply & fit", href: "/mobile-tyre-fitting" },
+                  { label: "Puncture Repair", sub: "BS AU 159 compliant on-site repairs", href: "/puncture-repair" },
+                  { label: "Wheel Balancing", sub: "Digital balancing — eliminates vibration", href: "/wheel-balancing" },
+                  { label: "Car Battery Replacement", sub: "Dead battery? We come to you", href: "/battery-replacement" },
+                  { label: "Emergency Fuel Delivery", sub: "Petrol & diesel delivered 24/7", href: "/emergency-fuel" },
+                  { label: "Locking Wheel Nut Removal", sub: "Specialist tools, no alloy damage", href: "/locking-nut-removal" },
+                ].map(s => (
+                  <Link key={s.href} href={s.href}>
+                    <div className="flex items-center justify-between p-3 bg-background/40 border border-white/5 hover:border-primary/30 rounded group transition-all cursor-pointer">
+                      <div>
+                        <p className="text-white text-sm font-bold group-hover:text-primary transition-colors">{s.label}</p>
+                        <p className="text-gray-500 text-xs">{s.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </section>
           </div>
 

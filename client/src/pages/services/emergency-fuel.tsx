@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, Fuel, AlertTriangle, Droplets, MapPin, Clock, Truck, CheckCircle } from "lucide-react";
+import { Phone, Fuel, AlertTriangle, Droplets, MapPin, Clock, Truck, CheckCircle, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/emergency_fuel_canister_pour.webp";
 import { Link } from "wouter";
 
@@ -133,6 +133,36 @@ export default function EmergencyFuel() {
                 </li>
               </ul>
             </section>
+          </div>
+
+            {/* Related Services */}
+            <section className="bg-secondary/20 p-8 rounded-lg border border-white/5">
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Our Other Mobile Services</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyre Fitting", sub: "Same-day tyre supply & fit at your location", href: "/mobile-tyre-fitting" },
+                  { label: "24/7 Emergency Call-Out", sub: "Flat tyre? Blowout? 30–60 min response", href: "/emergency-call-out" },
+                  { label: "Puncture Repair", sub: "BS AU 159 standard permanent repairs", href: "/puncture-repair" },
+                  { label: "Wheel Balancing", sub: "Digital balancing at your driveway", href: "/wheel-balancing" },
+                  { label: "Car Battery Replacement", sub: "Dead battery? We supply & fit on-site", href: "/battery-replacement" },
+                  { label: "Locking Wheel Nut Removal", sub: "Lost your key? No alloy damage", href: "/locking-nut-removal" },
+                ].map(s => (
+                  <Link key={s.href} href={s.href}>
+                    <div className="flex items-center justify-between p-3 bg-background/40 border border-white/5 hover:border-primary/30 rounded group transition-all cursor-pointer">
+                      <div>
+                        <p className="text-white text-sm font-bold group-hover:text-primary transition-colors">{s.label}</p>
+                        <p className="text-gray-500 text-xs">{s.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-4">
+                <Link href="/locations" className="text-primary hover:underline text-sm font-bold">View all coverage areas →</Link>
+              </div>
+            </section>
+
           </div>
 
           {/* Right Column */}

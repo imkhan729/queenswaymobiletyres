@@ -21,7 +21,10 @@ import {
   CreditCard,
   CalendarCheck,
   Quote,
-  Navigation
+  Navigation,
+  Car,
+  Zap,
+  Lock
 } from "lucide-react";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.webp";
@@ -62,22 +65,19 @@ export default function Home() {
     "priceRange": "££",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
+      "addressLocality": "Hemel Hempstead",
+      "addressRegion": "Hertfordshire",
       "addressCountry": "UK"
     },
     "areaServed": [
-      { "@type": "City", "name": "London" },
+      { "@type": "City", "name": "Hemel Hempstead" },
       { "@type": "City", "name": "Watford" },
       { "@type": "City", "name": "St Albans" },
-      { "@type": "City", "name": "Hemel Hempstead" },
-      { "@type": "City", "name": "Harrow" },
-      { "@type": "City", "name": "Barnet" },
+      { "@type": "City", "name": "Luton" },
+      { "@type": "City", "name": "Aylesbury" },
       { "@type": "AdministrativeArea", "name": "Hertfordshire" },
       { "@type": "AdministrativeArea", "name": "Bedfordshire" },
-      { "@type": "AdministrativeArea", "name": "Buckinghamshire" },
-      { "@type": "Place", "name": "M1 Corridor" },
-      { "@type": "Place", "name": "M25 Corridor" }
+      { "@type": "AdministrativeArea", "name": "Buckinghamshire" }
     ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -87,7 +87,7 @@ export default function Home() {
       "opens": "00:00",
       "closes": "23:59"
     },
-    "description": "Expert mobile tyre fitting in London & Hertfordshire. We bring the garage to your home, workplace, or roadside. 24/7 Emergency response."
+    "description": "Expert mobile tyre fitting in Hemel Hempstead & Hertfordshire. We bring the garage to your home, workplace, or roadside. 24/7 Emergency response."
   };
 
   return (
@@ -98,11 +98,11 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-12">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
-            alt="Mobile Tyre Fitting Van in London"
+            alt="Mobile Tyre Fitting Van in Hemel Hempstead"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -120,14 +120,13 @@ export default function Home() {
               Rated 5★ on Google | 24/7 Emergency Response
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold leading-[0.9] mb-6 text-white drop-shadow-lg">
-              Professional <br />
-              <span className="text-primary">Mobile Tyre Fitting</span> <br />
-              in London
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] mb-4 text-white drop-shadow-lg">
+              Queensway <span className="text-primary">Mobile Tyre Fitting</span> <br />
+              <span className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-200 block mt-2">— Hemel Hempstead & Hertfordshire</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl font-light leading-relaxed drop-shadow-md">
-              Reliable, Fast & Affordable Service. We bring the garage to your home, workplace, or roadside.
+            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl font-light leading-relaxed drop-shadow-md">
+              Reliable, fast & affordable 24/7 service. Based in Hemel Hempstead, we bring the garage to your home, work, or roadside within a 40-mile radius—covering Watford, St Albans, Luton & Aylesbury.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -271,6 +270,83 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tyre Brands Section */}
+      <section className="py-16 bg-secondary/30 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Premium Selection</h2>
+            <h3 className="text-3xl md:text-4xl font-heading font-bold text-white">Tyre Brands We Stock</h3>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              From premium European manufacturers to quality budget brands, we carry an extensive stock for same-day fitting. All tyres are sourced from authorised UK distributors and backed by manufacturer warranties.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+            {[
+              { name: "Michelin", tier: "premium" },
+              { name: "Continental", tier: "premium" },
+              { name: "Pirelli", tier: "premium" },
+              { name: "Bridgestone", tier: "premium" },
+              { name: "Goodyear", tier: "premium" },
+              { name: "Dunlop", tier: "premium" },
+              { name: "Hankook", tier: "mid" },
+              { name: "Yokohama", tier: "mid" },
+              { name: "Toyo", tier: "mid" },
+              { name: "Falken", tier: "mid" },
+              { name: "Nexen", tier: "budget" },
+              { name: "Avon", tier: "budget" }
+            ].map(brand => (
+              <div key={brand.name} className="bg-secondary/60 border border-white/10 hover:border-primary/40 p-4 rounded-lg text-center transition-all hover:-translate-y-0.5 group">
+                <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{brand.name}</p>
+                <p className="text-xs text-gray-500 mt-1 capitalize">{brand.tier}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-primary" />Summer Tyres</span>
+            <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400" />Winter Tyres</span>
+            <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-green-400" />All-Season Tyres</span>
+            <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400" />Run-Flat Tyres</span>
+            <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-orange-400" />XL / Extra Load</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle Types Section */}
+      <section className="py-20 bg-background border-b border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-primary font-bold uppercase tracking-widest mb-2">All Vehicles Welcome</h2>
+            <h3 className="text-3xl md:text-4xl font-heading font-bold text-white">We Fit Tyres for Every Vehicle Type</h3>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              Our state-of-the-art mobile vans are equipped to handle any vehicle — from standard hatchbacks to high-performance sports cars, SUVs, 4x4s, and commercial vans.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            {[
+              { icon: Car, label: "Cars & Hatchbacks", desc: "All makes from Ford to Ferrari. Sizes 13\" to 22\"." },
+              { icon: Truck, label: "SUVs & 4x4s", desc: "Land Rover, BMW X5, Audi Q7, Range Rover & more." },
+              { icon: Settings, label: "Vans & LCVs", desc: "Transit, Sprinter, Vivaro. Single or double rear wheel." },
+              { icon: Zap, label: "High Performance", desc: "Low-profile, run-flat, and ultra-high-performance tyres." }
+            ].map((type, i) => (
+              <div key={i} className="bg-secondary/30 border border-white/10 hover:border-primary/40 p-6 rounded-xl text-center group transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <type.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h4 className="text-white font-bold mb-2">{type.label}</h4>
+                <p className="text-gray-400 text-sm">{type.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/mobile-tyre-fitting">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black font-bold uppercase tracking-wide">
+                View Our Full Mobile Tyre Fitting Service <ChevronRight className="ml-1 w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Detailed Content for SEO - Why Choose Us 1 */}
       <section className="py-24 bg-background border-t border-white/5">
         <div className="container mx-auto px-4">
@@ -278,7 +354,7 @@ export default function Home() {
             <div className="space-y-6">
               <h3 className="text-3xl font-heading font-bold text-white">Why Choose Queensway Mobile Tyres?</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Queensway Mobile Tyres is London's leading mobile tyre fitting service. We understand that your time is valuable, which is why we bring the tyre depot to you. Whether you need a <strong>same-day tyre replacement at home</strong>, a quick <strong>puncture repair at work</strong>, or urgent <strong>24/7 emergency roadside assistance</strong>, our expert technicians are just a phone call away.
+                Queensway Mobile Tyres is Hemel Hempstead and Hertfordshire's leading mobile tyre fitting service. We understand that your time is valuable, which is why we bring the tyre depot to you within a 40-mile radius. Whether you need a <strong>same-day tyre replacement at home</strong>, a quick <strong>puncture repair at work</strong>, or urgent <strong>24/7 emergency roadside assistance</strong>, our expert technicians are just a phone call away.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
                 Our fleet of vans is equipped with the latest tyre changing and balancing machinery, allowing us to handle everything from standard cars to 4x4s, vans, and high-performance vehicles. We stock a huge range of tyres including premium brands like Michelin, Continental, and Pirelli, as well as quality budget options.
@@ -294,7 +370,7 @@ export default function Home() {
                   <Clock className="text-primary w-5 h-5" /> 60-Min Response
                 </div>
                 <div className="flex items-center gap-3 text-white font-medium">
-                  <MapPin className="text-primary w-5 h-5" /> Greater London Coverage
+                  <MapPin className="text-primary w-5 h-5" /> 40-Mile Coverage Radius
                 </div>
               </div>
 
@@ -525,20 +601,20 @@ export default function Home() {
             <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Service Areas</h2>
             <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">AREAS WE SERVE</h3>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              We provide fast mobile tyre fitting across London and the Home Counties. Select your area below for more details.
+              Based in Hemel Hempstead, we provide fast mobile tyre fitting within a 40-mile radius across Hertfordshire, Bedfordshire, and Buckinghamshire. Select your area below for more details.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
+              { name: "Hemel Hempstead", link: "/locations/hemel-hempstead" },
               { name: "Watford", link: "/locations/watford" },
               { name: "St Albans", link: "/locations/st-albans" },
-              { name: "Hemel Hempstead", link: "/locations/hemel-hempstead" },
-              { name: "London", link: "/locations/london" },
-              { name: "Harrow", link: "/locations" },
-              { name: "Barnet", link: "/locations" },
-              { name: "Luton", link: "/locations" },
-              { name: "High Wycombe", link: "/locations" }
+              { name: "Luton", link: "/locations/luton" },
+              { name: "Aylesbury", link: "/locations/aylesbury" },
+              { name: "Stevenage", link: "/locations/stevenage" },
+              { name: "High Wycombe", link: "/locations/high-wycombe" },
+              { name: "Milton Keynes", link: "/locations/milton-keynes" }
             ].map((city) => (
               <Link key={city.name} href={city.link}>
                 <div className="bg-secondary/30 border border-white/10 hover:border-primary/50 p-6 rounded-lg text-center cursor-pointer group transition-all duration-300 hover:-translate-y-1">
@@ -555,17 +631,20 @@ export default function Home() {
             <div className="w-full md:w-1/2">
               <h3 className="text-3xl font-heading font-bold text-white mb-4">Coverage You Can Count On</h3>
               <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Our strategic location allows us to offer **rapid response times** to the M1, M25, and A41 corridors.
-                Whether you are in North London, Hertfordshire, Bedfordshire, or Buckinghamshire, our mobile tyre fitters are nearby.
+                Operating from our Hemel Hempstead base with a <strong>40-mile working radius</strong>, our strategic location allows us to offer <strong>rapid response times</strong>. 
+                Whether you are in Hemel Hempstead, Watford, St Albans, Luton, Aylesbury, or anywhere across Hertfordshire, Bedfordshire, or Buckinghamshire, our mobile tyre fitters are always nearby.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Harlow</span>
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Enfield</span>
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Uxbridge</span>
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Slough</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Welwyn Garden City</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Harpenden</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Amersham</span>
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Rickmansworth</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Chesham</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Borehamwood</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Dunstable</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Tring</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Berkhamsted</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Northampton</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Hitchin</span>
               </div>
               <Link href="/locations">
                 <Button className="bg-primary text-black hover:bg-primary/90 font-bold uppercase tracking-wide">
@@ -575,7 +654,7 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/2 h-[400px] rounded-xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.7281066703!2d-0.41585800000000003!3d51.651581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aa18d5336d3%3A0x6b1622d42407510!2sWatford!5e0!3m2!1sen!2suk!4v1650000000000!5m2!1sen!2suk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158145.75330836512!2d-0.7103178224536236!3d51.75168019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487643f8ddf311eb%3A0xe1047644265cc281!2sHemel%20Hempstead!5e0!3m2!1sen!2suk!4v1703000000000!5m2!1sen!2suk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -585,6 +664,97 @@ export default function Home() {
                 title="Queensway Mobile Tyres Service Area"
                 className="absolute inset-0"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Hub - All Services & Locations */}
+      <section className="py-20 bg-secondary/20 border-t border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Explore Our Services</h2>
+            <h3 className="text-3xl md:text-4xl font-heading font-bold text-white">Everything You Need, Where You Are</h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Services Column */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <Wrench className="w-5 h-5 text-primary" /> Our Mobile Services
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyre Fitting", sub: "Same-day supply & fit at your location", href: "/mobile-tyre-fitting" },
+                  { label: "24/7 Emergency Call-Out", sub: "Rapid roadside response in 30–60 mins", href: "/emergency-call-out" },
+                  { label: "Puncture Repair", sub: "BS AU 159 compliant permanent repairs", href: "/puncture-repair" },
+                  { label: "Wheel Balancing", sub: "Digital precision balancing, no vibration", href: "/wheel-balancing" },
+                  { label: "Car Battery Replacement", sub: "Supply & fit AGM, EFB & standard batteries", href: "/battery-replacement" },
+                  { label: "Emergency Fuel Delivery", sub: "Petrol & diesel delivered to you 24/7", href: "/emergency-fuel" },
+                  { label: "Locking Wheel Nut Removal", sub: "Lost your key? We remove without damage", href: "/locking-nut-removal" },
+                ].map(service => (
+                  <Link key={service.href} href={service.href}>
+                    <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/40 rounded-lg group transition-all hover:-translate-x-0.5 cursor-pointer">
+                      <div>
+                        <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{service.label}</p>
+                        <p className="text-gray-500 text-xs mt-0.5">{service.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Locations Column */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-primary" /> Key Service Areas
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyres Hemel Hempstead", sub: "Our home base — HP1, HP2, HP3", href: "/locations/hemel-hempstead" },
+                  { label: "Mobile Tyres Watford", sub: "WD17, WD18, WD19, WD24, WD25", href: "/locations/watford" },
+                  { label: "Mobile Tyres St Albans", sub: "AL1, AL2, AL3, AL4 & surrounding areas", href: "/locations/st-albans" },
+                  { label: "Mobile Tyres Luton", sub: "LU1–LU4, Luton Airport & M1 J10–11", href: "/locations/luton" },
+                  { label: "Mobile Tyres Harrow", sub: "HA1, HA2, HA3 & North West London", href: "/locations/harrow" },
+                  { label: "Mobile Tyres Slough", sub: "SL1, SL2, SL3 & M4 corridor", href: "/locations/slough" },
+                  { label: "Mobile Tyres Milton Keynes", sub: "MK postcodes & A5 corridor", href: "/locations/milton-keynes" },
+                  { label: "Mobile Tyres North London", sub: "Barnet, Edgware, Enfield & N postcodes", href: "/locations/london" },
+                  { label: "View All Coverage Areas", sub: "Full list of 80+ towns & villages", href: "/locations" },
+                ].map(loc => (
+                  <Link key={loc.href} href={loc.href}>
+                    <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/40 rounded-lg group transition-all hover:-translate-x-0.5 cursor-pointer">
+                      <div>
+                        <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{loc.label}</p>
+                        <p className="text-gray-500 text-xs mt-0.5">{loc.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Blog Links */}
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <Star className="w-5 h-5 text-primary" /> Tyre Guides & Advice
+            </h4>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: "How to Handle a Tyre Blowout", href: "/blog/handling-tyre-blowout" },
+                { label: "When to Replace Your Tyres", href: "/blog/when-to-replace-tyres" },
+                { label: "Decoding Tyre Markings", href: "/blog/decoding-tyre-markings" },
+                { label: "Mobile Tyre Fitting in London", href: "/blog/mobile-tyre-fitting-london" },
+                { label: "Essential Tyre Safety Tips", href: "/blog/tyre-safety-tips" },
+                { label: "Winter Tyres Guide", href: "/blog/winter-tyres-guide" },
+              ].map(post => (
+                <Link key={post.href} href={post.href}>
+                  <span className="px-4 py-2 bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary rounded-full text-sm text-gray-300 transition-colors cursor-pointer">{post.label}</span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

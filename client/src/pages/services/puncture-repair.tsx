@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle, Wrench, ShieldCheck, HelpCircle, AlertTriangle } from "lucide-react";
+import { Phone, CheckCircle, Wrench, ShieldCheck, HelpCircle, AlertTriangle, MapPin, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.webp";
 import tyreImage from "@assets/generated_images/close_up_of_car_tyre_tread.webp";
 import { Link } from "wouter";
@@ -107,6 +107,54 @@ export default function PunctureRepair() {
               <p className="text-center text-gray-400 mt-6 text-sm italic">
                 *We always bring a replacement tyre with us just in case a repair is not safe or possible, ensuring you are never left stranded.
               </p>
+            </section>
+
+            {/* Areas We Cover */}
+            <section className="bg-primary/5 p-8 rounded-lg border border-primary/10">
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Puncture Repair Coverage Areas</h3>
+              <p className="text-gray-400 mb-4 text-sm">We carry out BS AU 159 compliant puncture repairs at your location across our full service area. Our mobile workshop reaches you within 30–60 minutes:</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {[
+                  { name: "Hemel Hempstead", href: "/locations/hemel-hempstead" },
+                  { name: "Watford", href: "/locations/watford" },
+                  { name: "St Albans", href: "/locations/st-albans" },
+                  { name: "Luton", href: "/locations/luton" },
+                  { name: "Harrow", href: "/locations/harrow" },
+                  { name: "Slough", href: "/locations/slough" },
+                  { name: "Milton Keynes", href: "/locations/milton-keynes" },
+                  { name: "North London", href: "/locations/london" },
+                ].map(area => (
+                  <Link key={area.name} href={area.href} className="px-3 py-1 bg-background rounded-full text-sm text-gray-300 border border-white/10 hover:border-primary/40 hover:text-primary flex items-center gap-1 transition-colors">
+                    <MapPin className="w-3 h-3 text-primary" /> {area.name}
+                  </Link>
+                ))}
+              </div>
+              <Link href="/locations" className="text-primary hover:underline text-sm font-bold">View all coverage areas →</Link>
+            </section>
+
+            {/* Related Services */}
+            <section className="bg-secondary/20 p-8 rounded-lg border border-white/5">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">Our Other Mobile Services</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Mobile Tyre Fitting", sub: "Full supply & fit service at your location", href: "/mobile-tyre-fitting" },
+                  { label: "24/7 Emergency Call-Out", sub: "Rapid roadside response — 30–60 mins", href: "/emergency-call-out" },
+                  { label: "Wheel Balancing", sub: "Digital balancing for smooth, safe driving", href: "/wheel-balancing" },
+                  { label: "Car Battery Replacement", sub: "AGM, EFB & standard batteries", href: "/battery-replacement" },
+                  { label: "Emergency Fuel Delivery", sub: "Petrol & diesel to your location 24/7", href: "/emergency-fuel" },
+                  { label: "Locking Wheel Nut Removal", sub: "Lost key? No alloy damage guaranteed", href: "/locking-nut-removal" },
+                ].map(s => (
+                  <Link key={s.href} href={s.href}>
+                    <div className="flex items-center justify-between p-3 bg-background/40 border border-white/5 hover:border-primary/30 rounded group transition-all cursor-pointer">
+                      <div>
+                        <p className="text-white text-sm font-bold group-hover:text-primary transition-colors">{s.label}</p>
+                        <p className="text-gray-500 text-xs">{s.sub}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </section>
 
             {/* Why Repair */}

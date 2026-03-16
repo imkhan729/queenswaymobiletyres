@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Truck, Wrench, Clock, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Locations() {
@@ -112,7 +112,7 @@ export default function Locations() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Mobile Tyre Fitting Coverage Area | London & Hertfordshire"
-        description="We cover a wide area including Watford, St Albans, Hemel Hempstead, Luton, and the M1/M25 corridors. Check if we cover your area."
+        description="We cover a wide area from our Hemel Hempstead base including Watford, St Albans, Luton, Aylesbury and surrounding areas within a 40-mile radius. Check if we cover your area."
         keywords="mobile tyre fitting areas, tyres watford, tyres st albans, tyres luton"
         schema={schema}
       />
@@ -161,7 +161,81 @@ export default function Locations() {
         </div>
       </div>
 
+      {/* All Services Available Across Our Coverage Area */}
+      <div className="py-16 bg-secondary/20 border-b border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-primary font-bold uppercase tracking-widest mb-2">Complete Service Range</h2>
+            <h3 className="text-3xl font-heading font-bold text-white">Services Available Across All Areas</h3>
+            <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+              Wherever you are in our 40-mile coverage radius, our full range of mobile automotive services is available. No need to visit a garage — we bring the workshop to you.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { icon: Truck, label: "Mobile Tyre Fitting", desc: "Same-day supply and fit at your home, workplace, or roadside. All brands, all sizes.", href: "/mobile-tyre-fitting" },
+              { icon: Clock, label: "24/7 Emergency Call-Out", desc: "Rapid roadside assistance across the M1, M25, A41 and all major routes. 30–60 min response.", href: "/emergency-call-out" },
+              { icon: Wrench, label: "Puncture Repair", desc: "Safe, permanent BS AU 159 compliant repairs. We assess and fix on-site so you don't need a new tyre unnecessarily.", href: "/puncture-repair" },
+              { icon: Settings, label: "Wheel Balancing", desc: "Digital computerised balancing eliminates vibration and extends tyre life. Included with every new fitting.", href: "/wheel-balancing" },
+              { icon: Battery, label: "Car Battery Replacement", desc: "Supply and fit AGM, EFB, and standard batteries for all makes. Includes alternator and charging test.", href: "/battery-replacement" },
+              { icon: Fuel, label: "Emergency Fuel Delivery", desc: "Run out of petrol or diesel? We deliver 5–10 litres to your location to get you to the nearest forecourt.", href: "/emergency-fuel" },
+              { icon: Lock, label: "Locking Wheel Nut Removal", desc: "Lost your locking nut key? Our specialist tools remove nuts safely without damaging your alloy wheels.", href: "/locking-nut-removal" },
+            ].map(service => (
+              <Link key={service.href} href={service.href}>
+                <div className="bg-secondary/40 border border-white/10 hover:border-primary/50 p-5 rounded-lg group transition-all hover:-translate-y-0.5 cursor-pointer h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold mb-1 group-hover:text-primary transition-colors flex items-center gap-1">
+                        {service.label} <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                      </h4>
+                      <p className="text-gray-400 text-sm">{service.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="py-16 container mx-auto px-4">
+        {/* Featured Location Pages */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-heading font-bold text-white mb-2">Our Key Service Hubs</h2>
+          <p className="text-gray-400 mb-8">Click your area for local coverage details, postcodes covered, response times, and a local FAQ.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+            {[
+              { name: "Hemel Hempstead", slug: "/locations/hemel-hempstead", postcodes: "HP1, HP2, HP3", desc: "Our base — fastest response times" },
+              { name: "Watford", slug: "/locations/watford", postcodes: "WD17–25", desc: "M1 & M25 junction coverage" },
+              { name: "St Albans", slug: "/locations/st-albans", postcodes: "AL1–AL4", desc: "City & surrounding villages" },
+              { name: "Luton", slug: "/locations/luton", postcodes: "LU1–LU4", desc: "Airport & M1 J10–11 service" },
+              { name: "Harrow", slug: "/locations/harrow", postcodes: "HA1–HA3", desc: "North West London coverage" },
+              { name: "Slough", slug: "/locations/slough", postcodes: "SL1–SL3", desc: "M4 corridor & Trading Estate" },
+              { name: "Milton Keynes", slug: "/locations/milton-keynes", postcodes: "MK postcodes", desc: "A5 corridor & city centre" },
+              { name: "North London", slug: "/locations/london", postcodes: "N, NW postcodes", desc: "Barnet, Edgware, Enfield" },
+              { name: "Northampton", slug: "/locations/northampton", postcodes: "NN postcodes", desc: "M1 J15–16 coverage" },
+              { name: "Stevenage", slug: "/locations/stevenage", postcodes: "SG1–SG2", desc: "A1(M) corridor service" },
+            ].map(hub => (
+              <Link key={hub.name} href={hub.slug}>
+                <div className="bg-white/5 border border-primary/30 p-5 rounded-lg hover:bg-primary/10 hover:border-primary/60 transition-all cursor-pointer group">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-0.5 group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div>
+                      <h3 className="text-white font-bold group-hover:text-primary transition-colors">{hub.name}</h3>
+                      <p className="text-primary text-xs font-mono mt-0.5">{hub.postcodes}</p>
+                      <p className="text-gray-400 text-xs mt-1">{hub.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-heading font-bold text-white mb-6">All Locations We Cover</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {locations.map((loc) => (
             loc.slug ? (
@@ -180,16 +254,45 @@ export default function Locations() {
           ))}
         </div>
 
-        <div className="mt-16 bg-primary/10 border border-primary/20 p-8 rounded-lg text-center">
+        {/* Why We Cover Such a Wide Area */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8">
+          <div className="bg-secondary/30 p-8 rounded-xl border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-4">Hertfordshire & Bedfordshire</h3>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              Our <strong>mobile tyre fitting service across Hertfordshire</strong> covers the M1 corridor from Junction 4 to Junction 12, the A41 from Watford to Hemel Hempstead and Aylesbury, and the A414 through Hatfield and Hertford. We serve towns including Hemel Hempstead, Watford, St Albans, Harpenden, Welwyn Garden City, Hatfield, Stevenage, Hitchin, and Berkhamsted. In Bedfordshire we cover Luton, Dunstable, Leighton Buzzard, and Flitwick.
+            </p>
+            <Link href="/locations/hemel-hempstead">
+              <span className="text-primary text-sm hover:underline font-bold">Hemel Hempstead page →</span>
+            </Link>
+          </div>
+          <div className="bg-secondary/30 p-8 rounded-xl border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-4">London, Middlesex & Buckinghamshire</h3>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              We extend our <strong>mobile tyre service into North and North West London</strong>, covering the M25 corridor between Junctions 18 and 25. We serve Harrow (HA postcodes), Uxbridge, Slough, High Wycombe, Amersham, and Gerrards Cross in Buckinghamshire. Our emergency team can also respond to breakdowns in Central and West London, Heathrow, and along the M40.
+            </p>
+            <Link href="/locations/london">
+              <span className="text-primary text-sm hover:underline font-bold">North London page →</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-8 bg-primary/10 border border-primary/20 p-8 rounded-lg text-center">
           <h2 className="text-2xl font-bold text-white mb-4">DON'T SEE YOUR LOCATION?</h2>
           <p className="text-gray-300 mb-6">
-            We cover many surrounding villages and areas along the M1 and M25 motorways. Give us a call to check if we can reach you.
+            We cover many surrounding villages and areas along the M1, M25, and A41. Give us a call — if we can reach you, we will.
           </p>
-          <a href="tel:07427515915">
-            <Button size="lg" className="bg-primary text-black font-bold uppercase">
-              <Phone className="mr-2 w-5 h-5" /> Call to Check: 07427 515915
-            </Button>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:07427515915">
+              <Button size="lg" className="bg-primary text-black font-bold uppercase">
+                <Phone className="mr-2 w-5 h-5" /> Call: 07427 515915
+              </Button>
+            </a>
+            <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold uppercase">
+                WhatsApp Your Location
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
       <Footer />
