@@ -22,10 +22,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies 📦
-        run: npm install  # Changed from ci to be more flexible
+        run: npm install
 
-      - name: Build 🏗️
-        run: npm run build
+      - name: Build static site 🏗️
+        run: npm run build:static
 
       - name: Deploy to Deploy Branch 🚀
         uses: peaceiris/actions-gh-pages@v4
