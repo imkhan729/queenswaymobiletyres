@@ -2,7 +2,7 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Clock, Truck, ShieldCheck, Zap } from "lucide-react";
+import { MapPin, Phone, Clock, Truck, ShieldCheck, Zap, Wrench, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_london.webp";
 
@@ -102,6 +102,40 @@ export default function LondonLocation() {
                     </div>
                 </div>
 
+                {/* Services in London */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-6">All Services Available in North London</h2>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                        Our <strong>ULEZ-compliant vans</strong> operate across North and North West London. From <strong>Barnet and Edgware</strong> to <strong>Wembley and Brent Cross</strong>, we bring the full mobile workshop to you. We stock Michelin, Continental, Pirelli, and budget tyres — all available for same-day fitting in N and NW postcodes.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        {[
+                            { icon: Truck, label: "Mobile Tyre Fitting North London", desc: "Same-day supply & fit at your home, driveway, or office car park in N/NW postcodes.", href: "/mobile-tyre-fitting" },
+                            { icon: Clock, label: "24/7 Emergency Call-Out London", desc: "Blowout on the North Circular or M25? We respond any hour, any day.", href: "/emergency-call-out" },
+                            { icon: Wrench, label: "Puncture Repair North London", desc: "BS AU 159 compliant permanent repairs — done in 20–30 minutes at your location.", href: "/puncture-repair" },
+                            { icon: Settings, label: "Wheel Balancing North London", desc: "Digital precision balancing at your door — eliminate steering vibration for good.", href: "/wheel-balancing" },
+                            { icon: Battery, label: "Battery Replacement North London", desc: "Dead battery in Barnet or Harrow? We supply & fit AGM, EFB & standard batteries.", href: "/battery-replacement" },
+                            { icon: Fuel, label: "Emergency Fuel Delivery London", desc: "Run dry near North London? Petrol or diesel delivered to your location 24/7.", href: "/emergency-fuel" },
+                            { icon: Lock, label: "Locking Nut Removal North London", desc: "Lost your locking key? Specialist removal — no alloy damage guaranteed.", href: "/locking-nut-removal" },
+                        ].map(s => (
+                            <Link key={s.href} href={s.href}>
+                                <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/50 rounded-lg group transition-all cursor-pointer">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors mt-0.5">
+                                            <s.icon className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold text-sm group-hover:text-primary transition-colors">{s.label}</p>
+                                            <p className="text-gray-500 text-xs mt-0.5">{s.desc}</p>
+                                        </div>
+                                    </div>
+                                    <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0 ml-2" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Why Choose Us */}
                 <div className="mb-16">
                     <h2 className="text-3xl font-heading font-bold text-white text-center mb-12">Why Londoners Trust Queensway</h2>
@@ -127,6 +161,67 @@ export default function LondonLocation() {
                             <h3 className="text-xl font-bold text-white mb-2">All Makes & Models</h3>
                             <p className="text-gray-400">From city cars to SUVs and high-performance vehicles, we have the stock and expertise to help.</p>
                         </div>
+                    </div>
+                </div>
+                {/* FAQ */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-heading font-bold text-white mb-8">Frequently Asked Questions — North London</h2>
+                    <div className="space-y-5">
+                        {[
+                            {
+                                q: "Do your vans operate inside the ULEZ zone?",
+                                a: "Yes. All of our service vans meet ULEZ and LEZ emissions standards, so we can reach you anywhere in Greater London without restriction, including within the Congestion Charge zone when required."
+                            },
+                            {
+                                q: "Which North London postcodes do you cover?",
+                                a: "We cover N1–N22 (Islington through Wood Green), NW1–NW11 (Camden through Golders Green), HA1–HA9 (Harrow through Wembley), EN1–EN5 (Enfield, Barnet, Cockfosters), and WD postcodes bordering North London."
+                            },
+                            {
+                                q: "How fast can you reach North London in an emergency?",
+                                a: "Response times for North London vary by location and time of day. For outer North London (Barnet, Edgware, Mill Hill), we typically arrive within 45–60 minutes. For inner North London (Finchley, Golders Green), we estimate 60–75 minutes depending on traffic."
+                            },
+                            {
+                                q: "Can you help on the North Circular (A406)?",
+                                a: "Yes — we provide emergency roadside assistance along the A406 North Circular. If you break down, move to the nearside lane or emergency area if possible, switch hazard lights on, and call us immediately. Do not exit the vehicle on a live carriageway."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-secondary/30 p-6 rounded-lg border border-white/5">
+                                <h3 className="text-lg font-bold text-white mb-2">{faq.q}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Nearby Locations */}
+                <div className="mb-12 border-t border-white/10 pt-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Nearby Areas We Also Cover</h3>
+                    <div className="flex flex-wrap gap-3">
+                        <Link href="/locations/harrow" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Harrow</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/watford" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Watford</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/slough" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Slough</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/hemel-hempstead" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Hemel Hempstead</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations" className="text-primary hover:text-white hover:underline text-sm font-bold">View All Locations</Link>
+                    </div>
+                </div>
+
+                {/* CTA */}
+                <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-bold text-white mb-4">Tyre Problem in North London?</h2>
+                    <p className="text-gray-300 mb-6 text-lg">24/7 ULEZ-compliant mobile tyre service across all North and North West London postcodes.</p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:07427515915">
+                            <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
+                                <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
+                            </Button>
+                        </a>
+                        <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase w-full sm:w-auto">WhatsApp Us</Button>
+                        </a>
                     </div>
                 </div>
             </div>

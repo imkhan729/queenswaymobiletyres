@@ -205,7 +205,9 @@ export default function HemelHempsteadLocation() {
                         <span className="text-gray-600">|</span>
                         <Link href="/locations/luton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Luton</Link>
                         <span className="text-gray-600">|</span>
-                        <Link href="/locations/northampton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Northampton</Link>
+                        <Link href="/locations/aylesbury" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Aylesbury</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/hatfield" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Hatfield</Link>
                         <span className="text-gray-600">|</span>
                         <Link href="/locations/milton-keynes" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Milton Keynes</Link>
                         <span className="text-gray-600">|</span>

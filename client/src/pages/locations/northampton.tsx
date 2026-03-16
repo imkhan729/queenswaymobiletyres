@@ -2,59 +2,66 @@ import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 
 export default function NorthamptonLocation() {
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "AutoRepair",
-        "name": "Queensway Mobile Tyres Northampton",
-        "description": "Expert mobile tyre fitting in Northampton. We come to you at home or work. 24/7 service in NN1, NN2, NN3, NN4, NN5.",
-        "areaServed": { "@type": "City", "name": "Northampton" },
-        "provider": { "@type": "LocalBusiness", "name": "Queensway Mobile Tyres", "telephone": "07427 515915" }
-    };
-
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <SEO title="Mobile Tyre Fitting Northampton | 24/7 Tyres" description="Northampton's leading mobile tyre fitting service. We replace tyres at your location across all NN postcodes and M1 J15-16." keywords="mobile tyre fitting northampton, tyres northampton, emergency tyre repair nn1, mobile tyres duston" image={heroImage} schema={schema} />
+            <SEO
+                title="Northampton Tyres — Outside Our 40-Mile Coverage | Queensway"
+                description="Northampton falls outside our standard 40-mile service radius from Hemel Hempstead. View our nearest coverage areas including Milton Keynes, Luton, and Aylesbury."
+                keywords="mobile tyre fitting northampton, tyres northampton"
+            />
             <Navbar />
-            <div className="pt-24 pb-12 bg-secondary relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20"><img src={heroImage} alt="Mobile Tyre Fitting Northampton" className="w-full h-full object-cover" /></div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">NORTHAMPTON</span></h1>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Professional mobile tyre services across Northamptonshire and the M1.</p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
-                        <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
-                    </div>
+
+            <div className="pt-32 pb-20 container mx-auto px-4 max-w-3xl text-center">
+                <div className="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/30">
+                    <AlertTriangle className="w-10 h-10 text-yellow-500" />
                 </div>
-            </div>
-            <div className="py-16 container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div>
-                        <h2 className="text-3xl font-heading font-bold text-white mb-6">Tyre Services in Northampton</h2>
-                        <p className="text-gray-400 mb-6 text-lg leading-relaxed">From <strong>Duston</strong> to <strong>Kingsthorpe</strong>, or even <strong>Moulton Park</strong>, our mobile tyre fitters are ready to assist. We save you the trip to the garage.</p>
-                        <ul className="space-y-4">
-                            {["M1 Junction 15 & 16 Support", "Town Centre Coverage", "Home & Work Visits", "Emergency Fitting"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 text-white"><ShieldCheck className="text-primary w-5 h-5 shrink-0" /> {item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="bg-secondary/50 p-8 rounded-xl border border-white/10">
-                        <h3 className="text-2xl font-bold text-white mb-6">NN Areas Covered</h3>
-                        <div className="grid grid-cols-2 gap-4">
-                            {["Abington", "Duston", "Kingsthorpe", "Far Cotton", "Delapre", "Dallington", "Wootton", "Hardingstone"].map(area => (
-                                <div key={area} className="flex items-center gap-2 text-gray-300"><MapPin className="w-4 h-4 text-primary shrink-0" /> <span className="text-sm">{area}</span></div>
-                            ))}
+                <h1 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                    Northampton Is Outside Our Coverage Area
+                </h1>
+                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                    We're sorry — Northampton is approximately 50 miles from our Hemel Hempstead base, which places it outside our standard <strong>40-mile service radius</strong>. We want to give every customer the fast response times we promise, and that means operating within our coverage zone.
+                </p>
+                <p className="text-gray-400 mb-10">
+                    Our closest coverage areas to Northampton are <strong>Milton Keynes</strong> (approx. 18 miles south of Northampton) and <strong>Luton</strong>. Please check your location against our coverage map.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                    <Link href="/locations/milton-keynes">
+                        <div className="bg-secondary/50 border border-primary/30 p-6 rounded-xl hover:border-primary/60 hover:bg-primary/10 transition-all cursor-pointer group text-left">
+                            <MapPin className="text-primary w-6 h-6 mb-3" />
+                            <h3 className="text-white font-bold mb-1 group-hover:text-primary">Mobile Tyres Milton Keynes</h3>
+                            <p className="text-gray-400 text-sm">Our closest hub — MK postcodes, M1 J13–14</p>
                         </div>
-                    </div>
+                    </Link>
+                    <Link href="/locations/luton">
+                        <div className="bg-secondary/50 border border-primary/30 p-6 rounded-xl hover:border-primary/60 hover:bg-primary/10 transition-all cursor-pointer group text-left">
+                            <MapPin className="text-primary w-6 h-6 mb-3" />
+                            <h3 className="text-white font-bold mb-1 group-hover:text-primary">Mobile Tyres Luton</h3>
+                            <p className="text-gray-400 text-sm">LU1–LU4, Luton Airport, M1 J10–11</p>
+                        </div>
+                    </Link>
                 </div>
-                <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl font-bold text-white mb-4">Tyre Problems in Northampton?</h2>
-                    <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">Call 07427 515915</Button></a>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="tel:07427515915">
+                        <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
+                            <Phone className="mr-2 w-5 h-5" /> Call to Check Coverage
+                        </Button>
+                    </a>
+                    <Link href="/locations">
+                        <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">
+                            View All Coverage Areas
+                        </Button>
+                    </Link>
                 </div>
+
+                <p className="text-gray-500 text-sm">
+                    Not sure if we cover your area? Call us on <a href="tel:07427515915" className="text-primary font-bold">07427 515915</a> — if we can reach you safely within our quality standards, we will.
+                </p>
             </div>
             <Footer />
         </div>

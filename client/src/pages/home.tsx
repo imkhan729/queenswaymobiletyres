@@ -75,9 +75,17 @@ export default function Home() {
       { "@type": "City", "name": "St Albans" },
       { "@type": "City", "name": "Luton" },
       { "@type": "City", "name": "Aylesbury" },
+      { "@type": "City", "name": "High Wycombe" },
+      { "@type": "City", "name": "Hatfield" },
+      { "@type": "City", "name": "Welwyn Garden City" },
+      { "@type": "City", "name": "Stevenage" },
+      { "@type": "City", "name": "Harrow" },
+      { "@type": "City", "name": "Slough" },
+      { "@type": "City", "name": "Milton Keynes" },
       { "@type": "AdministrativeArea", "name": "Hertfordshire" },
       { "@type": "AdministrativeArea", "name": "Bedfordshire" },
-      { "@type": "AdministrativeArea", "name": "Buckinghamshire" }
+      { "@type": "AdministrativeArea", "name": "Buckinghamshire" },
+      { "@type": "AdministrativeArea", "name": "Middlesex" }
     ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -636,6 +644,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Welwyn Garden City</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Hatfield</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Harpenden</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Amersham</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Chesham</span>
@@ -643,8 +652,9 @@ export default function Home() {
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Dunstable</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Tring</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Berkhamsted</span>
-                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Northampton</span>
                 <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Hitchin</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Uxbridge</span>
+                <span className="px-3 py-1 bg-white/5 rounded text-sm text-gray-300">Rickmansworth</span>
               </div>
               <Link href="/locations">
                 <Button className="bg-primary text-black hover:bg-primary/90 font-bold uppercase tracking-wide">
@@ -717,11 +727,15 @@ export default function Home() {
                   { label: "Mobile Tyres Watford", sub: "WD17, WD18, WD19, WD24, WD25", href: "/locations/watford" },
                   { label: "Mobile Tyres St Albans", sub: "AL1, AL2, AL3, AL4 & surrounding areas", href: "/locations/st-albans" },
                   { label: "Mobile Tyres Luton", sub: "LU1–LU4, Luton Airport & M1 J10–11", href: "/locations/luton" },
+                  { label: "Mobile Tyres Aylesbury", sub: "HP17–HP22 & A41 corridor", href: "/locations/aylesbury" },
+                  { label: "Mobile Tyres High Wycombe", sub: "HP10–HP15 & M40 J4", href: "/locations/high-wycombe" },
+                  { label: "Mobile Tyres Hatfield", sub: "AL9, AL10 & A1(M) J3 — 15mi from base", href: "/locations/hatfield" },
+                  { label: "Mobile Tyres Welwyn Garden City", sub: "AL7, AL8 & A1(M) J4 corridor", href: "/locations/welwyn-garden-city" },
                   { label: "Mobile Tyres Harrow", sub: "HA1, HA2, HA3 & North West London", href: "/locations/harrow" },
                   { label: "Mobile Tyres Slough", sub: "SL1, SL2, SL3 & M4 corridor", href: "/locations/slough" },
-                  { label: "Mobile Tyres Milton Keynes", sub: "MK postcodes & A5 corridor", href: "/locations/milton-keynes" },
+                  { label: "Mobile Tyres Milton Keynes", sub: "MK postcodes & M1 J13–14", href: "/locations/milton-keynes" },
                   { label: "Mobile Tyres North London", sub: "Barnet, Edgware, Enfield & N postcodes", href: "/locations/london" },
-                  { label: "View All Coverage Areas", sub: "Full list of 80+ towns & villages", href: "/locations" },
+                  { label: "View All Coverage Areas", sub: "Full list of towns & villages within 40 miles", href: "/locations" },
                 ].map(loc => (
                   <Link key={loc.href} href={loc.href}>
                     <div className="flex items-center justify-between p-4 bg-secondary/30 border border-white/10 hover:border-primary/40 rounded-lg group transition-all hover:-translate-x-0.5 cursor-pointer">

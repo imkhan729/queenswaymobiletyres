@@ -6,33 +6,33 @@ import { MapPin, Phone, Truck, Wrench, Clock, Battery, Fuel, Settings, Lock, Che
 import { Link } from "wouter";
 
 export default function Locations() {
-  // De-duplicated and structured locations list
-  // De-duplicated and structured locations list
+  // All locations within 40-mile radius of Hemel Hempstead base
   const locations = [
-    // Major Hubs with Pages
+    // Major Hubs with Dedicated Pages
+    { name: "Hemel Hempstead", slug: "/locations/hemel-hempstead" },
     { name: "Watford", slug: "/locations/watford" },
     { name: "St Albans", slug: "/locations/st-albans" },
-    { name: "Hemel Hempstead", slug: "/locations/hemel-hempstead" },
     { name: "Luton", slug: "/locations/luton" },
-    { name: "Milton Keynes", slug: "/locations/milton-keynes" },
     { name: "Harrow", slug: "/locations/harrow" },
     { name: "Slough", slug: "/locations/slough" },
-    { name: "Northampton", slug: "/locations/northampton" },
+    { name: "Aylesbury", slug: "/locations/aylesbury" },
+    { name: "High Wycombe", slug: "/locations/high-wycombe" },
+    { name: "Hatfield", slug: "/locations/hatfield" },
+    { name: "Welwyn Garden City", slug: "/locations/welwyn-garden-city" },
+    { name: "Milton Keynes", slug: "/locations/milton-keynes" },
     { name: "North London", slug: "/locations/london" },
+    { name: "Stevenage", slug: "/locations/stevenage" },
 
-    // Hertfordshire
-    { name: "Harpenden", slug: "/locations/st-albans" }, // Grouping
-    { name: "Berkhamsted", slug: "/locations/hemel-hempstead" }, // Grouping
-    { name: "Kings Langley", slug: "/locations/watford" }, // Grouping
+    // Hertfordshire (within 40 miles)
+    { name: "Harpenden", slug: "/locations/st-albans" },
+    { name: "Berkhamsted", slug: "/locations/hemel-hempstead" },
+    { name: "Kings Langley", slug: "/locations/watford" },
     { name: "Abbots Langley", slug: "/locations/watford" },
     { name: "Rickmansworth" },
     { name: "Borehamwood" },
     { name: "Potters Bar" },
-    { name: "Hatfield" },
-    { name: "Stevenage", slug: "/locations/stevenage" },
     { name: "Hitchin" },
-    { name: "Letchworth" },
-    { name: "Welwyn Garden City" },
+    { name: "Letchworth Garden City" },
     { name: "Hertford" },
     { name: "Hoddesdon" },
     { name: "Ware" },
@@ -44,32 +44,30 @@ export default function Locations() {
     { name: "Bovingdon" },
     { name: "Redbourn" },
     { name: "London Colney" },
-    { name: "Great Gaddesden" },
-    { name: "Little Gaddesden" },
     { name: "Chipperfield" },
     { name: "Maple Cross" },
     { name: "Apsley" },
+    { name: "Knebworth" },
 
-    // Bedfordshire
-    { name: "Dunstable", slug: "/locations/luton" }, // Nearby
+    // Bedfordshire (within 40 miles)
+    { name: "Dunstable", slug: "/locations/luton" },
     { name: "Leighton Buzzard" },
-    { name: "Bedford" },
     { name: "Flitwick" },
     { name: "Toddington" },
     { name: "Cranfield" },
     { name: "Luton Airport", slug: "/locations/luton" },
 
-    // Buckinghamshire
-    { name: "High Wycombe" },
-    { name: "Aylesbury" },
+    // Buckinghamshire (within 40 miles)
     { name: "Amersham" },
     { name: "Chesham" },
     { name: "Beaconsfield" },
     { name: "Gerrards Cross" },
     { name: "Marlow" },
+    { name: "Princes Risborough", slug: "/locations/aylesbury" },
     { name: "Newport Pagnell", slug: "/locations/milton-keynes" },
+    { name: "Buckingham" },
 
-    // London & Greater London
+    // London & Greater London (within 40 miles)
     { name: "Barnet", slug: "/locations/london" },
     { name: "Edgware", slug: "/locations/london" },
     { name: "Stanmore", slug: "/locations/london" },
@@ -78,24 +76,23 @@ export default function Locations() {
     { name: "Ruislip" },
     { name: "Northwood" },
     { name: "Pinner" },
-    { name: "Ealing" },
     { name: "Hayes" },
     { name: "Hillingdon" },
-    { name: "Feltham" },
     { name: "Heathrow" },
-    { name: "Mayfair" },
-    { name: "Greater London" },
 
-    // Berkshire & Others
+    // Berkshire (within 40 miles)
     { name: "Maidenhead" },
-    { name: "Reading" },
-    { name: "Basingstoke" },
-    { name: "Cambridge" },
+    { name: "Windsor" },
+    { name: "Marlow (SL7)" },
+
+    // Essex (within 40 miles)
     { name: "Harlow" },
-    { name: "Kettering" },
-    { name: "Wylvn Garden City" }, // Typo from user, corrected in main list but keeping for safety if needed, or mapping to Welwyn
-    { name: "M1 Corridor" },
-    { name: "M25 Corridor" }
+    { name: "Epping" },
+
+    // Key Routes
+    { name: "M1 Corridor (J1–J14)" },
+    { name: "M25 (J18–J25)" },
+    { name: "A41 Corridor" },
   ];
 
   const schema = {
@@ -111,9 +108,9 @@ export default function Locations() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Mobile Tyre Fitting Coverage Area | London & Hertfordshire"
-        description="We cover a wide area from our Hemel Hempstead base including Watford, St Albans, Luton, Aylesbury and surrounding areas within a 40-mile radius. Check if we cover your area."
-        keywords="mobile tyre fitting areas, tyres watford, tyres st albans, tyres luton"
+        title="Mobile Tyre Fitting Coverage Area | Hertfordshire, Bucks & London"
+        description="Queensway Mobile Tyres covers a 40-mile radius from Hemel Hempstead, including Watford, St Albans, Luton, Aylesbury, High Wycombe, Hatfield, Welwyn Garden City and beyond."
+        keywords="mobile tyre fitting areas, tyres watford, tyres st albans, tyres luton, tyres aylesbury, mobile tyres high wycombe, mobile tyres hatfield, mobile tyres welwyn garden city"
         schema={schema}
       />
       <Navbar />
@@ -214,9 +211,12 @@ export default function Locations() {
               { name: "Luton", slug: "/locations/luton", postcodes: "LU1–LU4", desc: "Airport & M1 J10–11 service" },
               { name: "Harrow", slug: "/locations/harrow", postcodes: "HA1–HA3", desc: "North West London coverage" },
               { name: "Slough", slug: "/locations/slough", postcodes: "SL1–SL3", desc: "M4 corridor & Trading Estate" },
-              { name: "Milton Keynes", slug: "/locations/milton-keynes", postcodes: "MK postcodes", desc: "A5 corridor & city centre" },
+              { name: "Aylesbury", slug: "/locations/aylesbury", postcodes: "HP17–HP22", desc: "A41 & A418 corridor" },
+              { name: "High Wycombe", slug: "/locations/high-wycombe", postcodes: "HP10–HP15", desc: "M40 J4 & South Bucks" },
+              { name: "Hatfield", slug: "/locations/hatfield", postcodes: "AL9, AL10", desc: "A1(M) J3 — 15mi from base" },
+              { name: "Welwyn Garden City", slug: "/locations/welwyn-garden-city", postcodes: "AL7, AL8", desc: "A1(M) J4 corridor" },
+              { name: "Milton Keynes", slug: "/locations/milton-keynes", postcodes: "MK postcodes", desc: "M1 J13–14 & grid roads" },
               { name: "North London", slug: "/locations/london", postcodes: "N, NW postcodes", desc: "Barnet, Edgware, Enfield" },
-              { name: "Northampton", slug: "/locations/northampton", postcodes: "NN postcodes", desc: "M1 J15–16 coverage" },
               { name: "Stevenage", slug: "/locations/stevenage", postcodes: "SG1–SG2", desc: "A1(M) corridor service" },
             ].map(hub => (
               <Link key={hub.name} href={hub.slug}>
@@ -259,7 +259,7 @@ export default function Locations() {
           <div className="bg-secondary/30 p-8 rounded-xl border border-white/10">
             <h3 className="text-xl font-bold text-white mb-4">Hertfordshire & Bedfordshire</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Our <strong>mobile tyre fitting service across Hertfordshire</strong> covers the M1 corridor from Junction 4 to Junction 12, the A41 from Watford to Hemel Hempstead and Aylesbury, and the A414 through Hatfield and Hertford. We serve towns including Hemel Hempstead, Watford, St Albans, Harpenden, Welwyn Garden City, Hatfield, Stevenage, Hitchin, and Berkhamsted. In Bedfordshire we cover Luton, Dunstable, Leighton Buzzard, and Flitwick.
+              Our <strong>mobile tyre fitting service across Hertfordshire</strong> covers the M1 corridor from Junction 4 to Junction 12, the A41 from Watford to Hemel Hempstead and Aylesbury, and the A414 through <Link href="/locations/hatfield"><span className="text-primary hover:underline">Hatfield</span></Link> and Hertford. We serve towns including <Link href="/locations/hemel-hempstead"><span className="text-primary hover:underline">Hemel Hempstead</span></Link>, <Link href="/locations/watford"><span className="text-primary hover:underline">Watford</span></Link>, <Link href="/locations/st-albans"><span className="text-primary hover:underline">St Albans</span></Link>, Harpenden, <Link href="/locations/welwyn-garden-city"><span className="text-primary hover:underline">Welwyn Garden City</span></Link>, <Link href="/locations/stevenage"><span className="text-primary hover:underline">Stevenage</span></Link>, Hitchin, and Berkhamsted. In Bedfordshire we cover <Link href="/locations/luton"><span className="text-primary hover:underline">Luton</span></Link>, Dunstable, Leighton Buzzard, and Flitwick.
             </p>
             <Link href="/locations/hemel-hempstead">
               <span className="text-primary text-sm hover:underline font-bold">Hemel Hempstead page →</span>
@@ -268,7 +268,7 @@ export default function Locations() {
           <div className="bg-secondary/30 p-8 rounded-xl border border-white/10">
             <h3 className="text-xl font-bold text-white mb-4">London, Middlesex & Buckinghamshire</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              We extend our <strong>mobile tyre service into North and North West London</strong>, covering the M25 corridor between Junctions 18 and 25. We serve Harrow (HA postcodes), Uxbridge, Slough, High Wycombe, Amersham, and Gerrards Cross in Buckinghamshire. Our emergency team can also respond to breakdowns in Central and West London, Heathrow, and along the M40.
+              We extend our <strong>mobile tyre service into North and North West London</strong>, covering the M25 corridor between Junctions 18 and 25. We serve <Link href="/locations/harrow"><span className="text-primary hover:underline">Harrow</span></Link> (HA postcodes), Uxbridge, <Link href="/locations/slough"><span className="text-primary hover:underline">Slough</span></Link>, <Link href="/locations/high-wycombe"><span className="text-primary hover:underline">High Wycombe</span></Link>, <Link href="/locations/aylesbury"><span className="text-primary hover:underline">Aylesbury</span></Link>, Amersham, and Gerrards Cross. Our emergency team also responds to breakdowns at Heathrow and along the M40 to <Link href="/locations/milton-keynes"><span className="text-primary hover:underline">Milton Keynes</span></Link>.
             </p>
             <Link href="/locations/london">
               <span className="text-primary text-sm hover:underline font-bold">North London page →</span>

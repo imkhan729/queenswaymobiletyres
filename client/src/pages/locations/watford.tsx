@@ -184,17 +184,37 @@ export default function WatfordLocation() {
                     </div>
                 </div>
 
+                {/* Extra FAQ */}
+                <div className="mb-16">
+                    <div className="space-y-5">
+                        <div className="bg-secondary/30 p-6 rounded-lg border border-white/5">
+                            <h3 className="text-lg font-bold text-white mb-2">What tyre brands do you stock for Watford customers?</h3>
+                            <p className="text-gray-400">We carry premium brands including <strong>Michelin, Continental, Pirelli, Bridgestone, Goodyear, and Dunlop</strong>, as well as quality mid-range options like Hankook, Yokohama, and Toyo, plus budget brands including Nexen and Avon — all available for same-day fitting in Watford.</p>
+                        </div>
+                        <div className="bg-secondary/30 p-6 rounded-lg border border-white/5">
+                            <h3 className="text-lg font-bold text-white mb-2">Do you supply run-flat and all-season tyres in Watford?</h3>
+                            <p className="text-gray-400">Yes. We carry <strong>run-flat tyres (RFT)</strong> for BMW, Mercedes, and Mini, <strong>all-season tyres</strong> from Michelin and Continental, and <strong>XL/extra-load tyres</strong> for SUVs and 4x4s. These are all available for fitting at your Watford home or workplace.</p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Nearby Locations & Internal Linking */}
                 <div className="mb-16 border-t border-white/10 pt-8">
-                    <h3 className="text-xl font-bold text-white mb-4">We also cover nearby areas:</h3>
-                    <div className="flex flex-wrap gap-4">
-                        <Link href="/locations/st-albans" className="text-primary hover:text-white hover:underline">Mobile Tyres St Albans</Link>
+                    <h3 className="text-xl font-bold text-white mb-4">Nearby Areas We Also Cover</h3>
+                    <div className="flex flex-wrap gap-3">
+                        <Link href="/locations/st-albans" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres St Albans</Link>
                         <span className="text-gray-600">|</span>
-                        <Link href="/locations/hemel-hempstead" className="text-primary hover:text-white hover:underline">Mobile Tyres Hemel Hempstead</Link>
+                        <Link href="/locations/hemel-hempstead" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Hemel Hempstead</Link>
                         <span className="text-gray-600">|</span>
-                        <Link href="/locations/london" className="text-primary hover:text-white hover:underline">Mobile Tyres North London</Link>
+                        <Link href="/locations/london" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres North London</Link>
                         <span className="text-gray-600">|</span>
-                        <Link href="/mobile-tyre-fitting" className="text-primary hover:text-white hover:underline">View All Services</Link>
+                        <Link href="/locations/harrow" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Harrow</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/luton" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Luton</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations/slough" className="text-primary hover:text-white hover:underline text-sm font-bold">Mobile Tyres Slough</Link>
+                        <span className="text-gray-600">|</span>
+                        <Link href="/locations" className="text-primary hover:text-white hover:underline text-sm font-bold">View All Locations</Link>
                     </div>
                 </div>
 

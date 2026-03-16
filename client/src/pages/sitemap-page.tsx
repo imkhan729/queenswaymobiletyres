@@ -54,7 +54,10 @@ export default function SitemapPage() {
               <li><Link href="/locations/stevenage"><a className="text-gray-300 hover:text-white">Stevenage</a></Link></li>
               <li><Link href="/locations/harrow"><a className="text-gray-300 hover:text-white">Harrow</a></Link></li>
               <li><Link href="/locations/slough"><a className="text-gray-300 hover:text-white">Slough</a></Link></li>
-              <li><Link href="/locations/northampton"><a className="text-gray-300 hover:text-white">Northampton</a></Link></li>
+              <li><Link href="/locations/aylesbury"><a className="text-gray-300 hover:text-white">Aylesbury</a></Link></li>
+              <li><Link href="/locations/high-wycombe"><a className="text-gray-300 hover:text-white">High Wycombe</a></Link></li>
+              <li><Link href="/locations/hatfield"><a className="text-gray-300 hover:text-white">Hatfield</a></Link></li>
+              <li><Link href="/locations/welwyn-garden-city"><a className="text-gray-300 hover:text-white">Welwyn Garden City</a></Link></li>
               <li><Link href="/locations/london"><a className="text-gray-300 hover:text-white">North London</a></Link></li>
             </ul>
           </div>

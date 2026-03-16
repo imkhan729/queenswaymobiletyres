@@ -36,6 +36,10 @@ import HarrowLocation from "@/pages/locations/harrow";
 import SloughLocation from "@/pages/locations/slough";
 import NorthamptonLocation from "@/pages/locations/northampton";
 import StevenageLocation from "@/pages/locations/stevenage";
+import AylesburyLocation from "@/pages/locations/aylesbury";
+import HighWycombeLocation from "@/pages/locations/high-wycombe";
+import WelwynGardenCityLocation from "@/pages/locations/welwyn-garden-city";
+import HatfieldLocation from "@/pages/locations/hatfield";
 
 function Router() {
   return (
@@ -67,6 +71,10 @@ function Router() {
       <Route path="/locations/slough" component={SloughLocation} />
       <Route path="/locations/northampton" component={NorthamptonLocation} />
       <Route path="/locations/stevenage" component={StevenageLocation} />
+      <Route path="/locations/aylesbury" component={AylesburyLocation} />
+      <Route path="/locations/high-wycombe" component={HighWycombeLocation} />
+      <Route path="/locations/welwyn-garden-city" component={WelwynGardenCityLocation} />
+      <Route path="/locations/hatfield" component={HatfieldLocation} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={PrivacyPolicy} />
       <Route path="/terms" component={TermsOfService} />

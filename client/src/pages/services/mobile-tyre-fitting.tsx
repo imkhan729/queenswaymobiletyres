@@ -188,9 +188,12 @@ export default function MobileTyreFitting() {
                   { name: "Harrow", href: "/locations/harrow" },
                   { name: "Slough", href: "/locations/slough" },
                   { name: "Luton", href: "/locations/luton" },
+                  { name: "Aylesbury", href: "/locations/aylesbury" },
+                  { name: "High Wycombe", href: "/locations/high-wycombe" },
+                  { name: "Hatfield", href: "/locations/hatfield" },
+                  { name: "Welwyn Garden City", href: "/locations/welwyn-garden-city" },
                   { name: "Milton Keynes", href: "/locations/milton-keynes" },
                   { name: "North London", href: "/locations/london" },
-                  { name: "Northampton", href: "/locations/northampton" },
                   { name: "Stevenage", href: "/locations/stevenage" },
                 ].map(area => (
                   <Link key={area.name} href={area.href} className="px-3 py-1 bg-background rounded-full text-sm text-gray-300 border border-white/10 hover:border-primary/40 hover:text-primary flex items-center gap-1 transition-colors">

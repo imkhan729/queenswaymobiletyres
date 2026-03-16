@@ -133,11 +133,14 @@ export default function EmergencyCallOut() {
                   { name: "Watford", href: "/locations/watford" },
                   { name: "St Albans", href: "/locations/st-albans" },
                   { name: "Luton Airport Area", href: "/locations/luton" },
+                  { name: "Aylesbury & A41", href: "/locations/aylesbury" },
+                  { name: "High Wycombe & M40", href: "/locations/high-wycombe" },
+                  { name: "Hatfield & A1(M) J3", href: "/locations/hatfield" },
+                  { name: "Welwyn Garden City", href: "/locations/welwyn-garden-city" },
                   { name: "Harrow", href: "/locations/harrow" },
                   { name: "Slough & M4", href: "/locations/slough" },
                   { name: "Milton Keynes", href: "/locations/milton-keynes" },
                   { name: "North London", href: "/locations/london" },
-                  { name: "Northampton", href: "/locations/northampton" },
                 ].map((area) => (
                   <Link key={area.name} href={area.href} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
                     <CheckCircle className="w-4 h-4 text-red-500 flex-shrink-0" /> {area.name}
