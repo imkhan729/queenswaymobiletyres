@@ -56,7 +56,7 @@ export default function EmergencyCallOut() {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="tel:07427515915">
+              <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-bold uppercase h-16 px-10 text-xl shadow-[0_0_30px_rgba(220,38,38,0.4)] w-full sm:w-auto">
                   <Phone className="mr-3 w-6 h-6 animate-bounce" /> CALL NOW: 07427 515915
                 </Button>
@@ -116,7 +116,7 @@ export default function EmergencyCallOut() {
                 <ol className="list-decimal list-inside space-y-3 text-gray-300">
                   <li><strong className="text-white">Stop Safely:</strong> Pull over to a safe place immediately. Do not drive on a flat tyre as it destroys the wheel rim.</li>
                   <li><strong className="text-white">Make Yourself Visible:</strong> Turn on hazard lights. If on a motorway, exit the vehicle from the passenger side and stand behind the barrier.</li>
-                  <li><strong className="text-white">Call Us:</strong> Dial <a href="tel:07427515915" className="text-primary hover:underline">07427 515915</a> (or alt: <a href="tel:07988018865" className="text-primary hover:underline">07988 018865</a>). Give us your location (WhatsApp location drop is best) and tyre size.</li>
+                  <li><strong className="text-white">Call Us:</strong> Dial <a href="tel:07427515915" className="text-primary hover:underline" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}> 07427 515915</a> (or alt: <a href="tel:07988018865" className="text-primary hover:underline" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>07988 018865</a>). Give us your location (WhatsApp location drop is best) and tyre size.</li>
                   <li><strong className="text-white">Wait Safely:</strong> We will dispatch the nearest van immediately and give you an ETA.</li>
                 </ol>
               </div>
@@ -206,7 +206,7 @@ export default function EmergencyCallOut() {
                 <p className="text-gray-400 text-xs mt-1">We quote the full price before dispatching a van.</p>
               </div>
 
-              <a href="tel:07427515915">
+              <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                 <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold h-12 uppercase">
                   Get Immediate Quote
                 </Button>

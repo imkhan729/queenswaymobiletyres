@@ -41,6 +41,7 @@ export function FloatingActionButtons() {
                 href="tel:07427515915"
                 className={`w-14 h-14 bg-[#3B82F6] rounded-full flex items-center justify-center shadow-lg hover:bg-[#2563EB] hover:scale-110 transition-all duration-300 ${isScrolled ? 'animate-pulse ring-4 ring-blue-400/50' : ''}`}
                 aria-label="Call us"
+                onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}
             >
                 <Phone className="w-8 h-8 text-white fill-current" />
             </a>

@@ -47,7 +47,7 @@ export default function NorthamptonLocation() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                    <a href="tel:07427515915">
+                    <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                         <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
                             <Phone className="mr-2 w-5 h-5" /> Call to Check Coverage
                         </Button>
@@ -60,7 +60,7 @@ export default function NorthamptonLocation() {
                 </div>
 
                 <p className="text-gray-500 text-sm">
-                    Not sure if we cover your area? Call us on <a href="tel:07427515915" className="text-primary font-bold">07427 515915</a> — if we can reach you safely within our quality standards, we will.
+                    Not sure if we cover your area? Call us on <a href="tel:07427515915" className="text-primary font-bold" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>07427 515915</a> — if we can reach you safely within our quality standards, we will.
                 </p>
             </div>
             <Footer />

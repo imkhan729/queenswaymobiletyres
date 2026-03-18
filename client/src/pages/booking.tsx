@@ -177,7 +177,7 @@ export default function Booking() {
               <p className="text-gray-300 text-sm mb-4">
                 For emergency call-outs or same-day service, it's faster to call us directly.
               </p>
-              <a href="tel:07427515915">
+              <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                 <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-black font-bold">
                   Call 07427 515915
                 </Button>

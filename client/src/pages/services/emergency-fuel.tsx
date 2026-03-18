@@ -51,9 +51,11 @@ export default function EmergencyFuel() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                  <Phone className="mr-2 w-5 h-5" /> Call Now: 07427 515915
-                </Button>
+                <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
+                  <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                    <Phone className="mr-2 w-5 h-5" /> Call Now: 07427 515915
+                  </Button>
+                </a>
                 <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
               </div>
               <Link href="/contact">
@@ -172,7 +174,7 @@ export default function EmergencyFuel() {
               <p className="text-gray-400 mb-6 text-sm">
                 If you are in a dangerous location (live lane of a motorway), please call 999 first. For safe roadside locations, call us:
               </p>
-              <a href="tel:07427515915">
+              <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                 <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold h-14 uppercase text-lg animate-pulse">
                   <Phone className="mr-2 w-5 h-5" /> 07427 515915
                 </Button>

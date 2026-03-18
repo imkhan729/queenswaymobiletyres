@@ -47,7 +47,7 @@ export default function StAlbansLocation() {
                         St Albans' premier mobile tyre service. Expert fitting at your home, workplace, or roadside 24/7.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915">
+                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
                                 <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>
@@ -216,7 +216,7 @@ export default function StAlbansLocation() {
                         Don't let a flat tyre ruin your day. Contact Queensway Mobile Tyres for immediate assistance in St Albans and AL postcodes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915">
+                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
                                 Call 07427 515915
                             </Button>

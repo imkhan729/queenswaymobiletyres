@@ -62,13 +62,13 @@ export function Footer() {
                 <span className="text-gray-400">101 Queensway, Service Station, Hemel Hempstead HP2 5HD</span>
               </li>
               <li>
-                <a href="tel:07427515915" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+                <a href="tel:07427515915" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                   <Phone className="w-5 h-5 text-primary group-hover:animate-pulse" />
                   <span className="font-bold text-white text-lg">07427 515 915</span>
                 </a>
               </li>
               <li>
-                <a href="tel:07988018865" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+                <a href="tel:07988018865" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
                   <Phone className="w-5 h-5 text-primary/60" />
                   <span className="text-sm font-medium">07988 018 865</span>
                 </a>

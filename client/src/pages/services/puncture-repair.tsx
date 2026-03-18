@@ -48,9 +48,11 @@ export default function PunctureRepair() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
-                  <Phone className="mr-2 w-5 h-5" /> Repair My Tyre: 07427 515915
-                </Button>
+                <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
+                  <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
+                    <Phone className="mr-2 w-5 h-5" /> Repair My Tyre: 07427 515915
+                  </Button>
+                </a>
                 <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest text-center sm:text-left">Secondary: 07988 018865</p>
               </div>
               <Link href="/contact">
