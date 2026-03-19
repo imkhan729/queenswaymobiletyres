@@ -49,7 +49,7 @@ export default function WheelBalancing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
+                <a href="tel:07427515915">
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Book Now: 07427 515915
                   </Button>
@@ -198,7 +198,7 @@ export default function WheelBalancing() {
                   <strong>Alignment</strong> (Tracking) fixes the car pulling to one side.<br /><br />
                   We focus on balancing to ensure your tyres roll smoothly and last longer.
                 </p>
-                <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
+                <a href="tel:07427515915">
                   <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold uppercase">
                     Book Balancing
                   </Button>

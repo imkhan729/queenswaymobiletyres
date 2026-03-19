@@ -26,7 +26,7 @@ export default function StevenageLocation() {
                     <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">STEVENAGE</span></h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Rapid response tyre fitting in Stevenage and along the A1(M).</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
                         <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ export default function StevenageLocation() {
                     <h2 className="text-3xl font-bold text-white mb-4">Tyre Emergency in Stevenage?</h2>
                     <p className="text-gray-300 mb-6 text-lg">Available 24/7 for emergency and scheduled tyre fitting across SG postcodes and the A1(M) corridor.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">Call 07427 515915</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">Call 07427 515915</Button></a>
                         <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase w-full sm:w-auto">WhatsApp Us</Button>
                         </a>

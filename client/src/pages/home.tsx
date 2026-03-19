@@ -138,7 +138,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:07427515915" className="w-full sm:w-auto" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}>
+              <a href="tel:07427515915" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-primary text-black hover:bg-primary/90 font-bold text-lg h-16 px-10 uppercase tracking-wide w-full shadow-[0_0_20px_rgba(255,255,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,0,0.5)] transition-all transform hover:-translate-y-1">
                   <Phone className="mr-2 h-6 w-6" />
                   Call Now

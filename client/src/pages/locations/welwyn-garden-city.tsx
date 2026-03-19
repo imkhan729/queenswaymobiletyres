@@ -34,7 +34,7 @@ export default function WelwynGardenCityLocation() {
                     <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">WELWYN GARDEN CITY</span></h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Rapid mobile tyre fitting in Welwyn Garden City and the A1(M) corridor — 24/7 coverage.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
                         <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ export default function WelwynGardenCityLocation() {
                     <h2 className="text-3xl font-bold text-white mb-4">Tyre Problem in Welwyn Garden City?</h2>
                     <p className="text-gray-300 mb-6 text-lg">24/7 mobile tyre service across AL7, AL8, and the A1(M) J4 corridor. Call or WhatsApp for an instant quote.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC'})}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto"><Phone className="mr-2 w-5 h-5" />Call 07427 515915</Button></a>
+                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto"><Phone className="mr-2 w-5 h-5" />Call 07427 515915</Button></a>
                         <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase w-full sm:w-auto">WhatsApp Us</Button>
                         </a>
