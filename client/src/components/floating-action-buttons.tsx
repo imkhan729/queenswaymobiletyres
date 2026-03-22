@@ -42,7 +42,7 @@ export function FloatingActionButtons() {
                 className={`w-14 h-14 bg-[#3B82F6] rounded-full flex items-center justify-center shadow-lg hover:bg-[#2563EB] hover:scale-110 transition-all duration-300 ${isScrolled ? 'animate-pulse ring-4 ring-blue-400/50' : ''}`}
                 aria-label="Call us"
                
-            >
+             onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                 <Phone className="w-8 h-8 text-white fill-current" />
             </a>
         </div>

@@ -1,4 +1,5 @@
 import { Switch, Route } from "wouter";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -91,6 +92,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ScrollToTop />
         <Toaster />
         <Router />
         <FloatingActionButtons />

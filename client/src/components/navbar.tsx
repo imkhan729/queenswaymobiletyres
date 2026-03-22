@@ -144,7 +144,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:07427515915" className="group">
+          <a href="tel:07427515915" className="group" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
             <Button variant="default" className="bg-primary hover:bg-primary/90 text-black font-bold uppercase tracking-wide px-6 py-6 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)] transition-all duration-300">
               <Phone className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
               07427 515 915
@@ -180,7 +180,7 @@ export function Navbar() {
                 <Link href="/blog"><a className="text-xl font-heading font-bold text-white hover:text-primary">Blog</a></Link>
                 <Link href="/contact"><a className="text-xl font-heading font-bold text-white hover:text-primary">Contact</a></Link>
                 <div className="flex flex-col gap-3 mt-4">
-                  <a href="tel:07427515915" className="w-full">
+                  <a href="tel:07427515915" className="w-full" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                     <Button className="w-full bg-primary text-black font-bold uppercase py-6 text-lg">
                       <Phone className="w-5 h-5 mr-3" />
                       07427 515 915

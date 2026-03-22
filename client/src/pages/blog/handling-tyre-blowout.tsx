@@ -172,7 +172,7 @@ export default function HandlingTyreBlowout() {
                             Our emergency team operates 24/7. Don't risk your safety.
                         </p>
                         <div className="flex flex-col gap-6 justify-center items-center">
-                            <a href="tel:07427515915" className="inline-flex items-center gap-3 text-4xl md:text-5xl font-black text-primary hover:text-white transition-colors">
+                            <a href="tel:07427515915" className="inline-flex items-center gap-3 text-4xl md:text-5xl font-black text-primary hover:text-white transition-colors" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                                 <PhoneCall className="w-10 h-10 md:w-12 md:h-12" /> 07427 515915
                             </a>
                             <div className="flex gap-2 items-center text-sm text-gray-400 bg-black/30 px-4 py-2 rounded-full">

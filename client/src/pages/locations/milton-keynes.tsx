@@ -26,7 +26,7 @@ export default function MiltonKeynesLocation() {
                     <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">MOBILE TYRE FITTING <br /><span className="text-primary">MILTON KEYNES</span></h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Serving Milton Keynes and surrounding Buckinghamshire areas with rapid mobile tyre services.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
+                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90"><Phone className="mr-2 w-5 h-5" /> Call 07427 515915</Button></a>
                         <Link href="/booking"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase">Book Online</Button></Link>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ export default function MiltonKeynesLocation() {
                     <h2 className="text-3xl font-bold text-white mb-4">Need Tyres in Milton Keynes?</h2>
                     <p className="text-gray-300 mb-6 text-lg">24/7 mobile tyre service across all MK postcodes, M1 J13–14, and surrounding Buckinghamshire areas.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915"><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">Call 07427 515915</Button></a>
+                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}><Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">Call 07427 515915</Button></a>
                         <a href="https://wa.me/447427515915" target="_blank" rel="noopener noreferrer">
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 uppercase w-full sm:w-auto">WhatsApp Us</Button>
                         </a>

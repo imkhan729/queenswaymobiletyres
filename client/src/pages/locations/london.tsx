@@ -47,7 +47,7 @@ export default function LondonLocation() {
                         The #1 choice for mobile tyre fitting in North & North West London. We bring the tyre shop to you.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915">
+                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
                                 <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>
@@ -214,7 +214,7 @@ export default function LondonLocation() {
                     <h2 className="text-3xl font-bold text-white mb-4">Tyre Problem in North London?</h2>
                     <p className="text-gray-300 mb-6 text-lg">24/7 ULEZ-compliant mobile tyre service across all North and North West London postcodes.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915">
+                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
                                 <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>

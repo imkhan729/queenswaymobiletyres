@@ -62,7 +62,7 @@ export function Footer() {
                 <span className="text-gray-400">101 Queensway, Service Station, Hemel Hempstead HP2 5HD</span>
               </li>
               <li>
-                <a href="tel:07427515915" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group">
+                <a href="tel:07427515915" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
                   <Phone className="w-5 h-5 text-primary group-hover:animate-pulse" />
                   <span className="font-bold text-white text-lg">07427 515 915</span>
                 </a>
