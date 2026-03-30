@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+﻿import { Navbar } from "@/components/navbar";
 import { ServiceCard } from "@/components/service-card";
 import { Footer } from "@/components/footer";
 import { FAQ } from "@/components/faq";
@@ -35,6 +35,7 @@ import tyreTread from "@assets/stock_images/modern_tyre_tread_cl_04a1f108.jpg";
 import wheelBalancing from "@assets/generated_images/digital_wheel_balancer_screen.webp";
 import fuelImage from "@assets/generated_images/emergency_fuel_canister_pour.webp";
 import batteryImage from "@assets/generated_images/car_battery_installation_close_up.webp";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function Home() {
   const container = {
@@ -138,7 +139,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:07427515915" className="w-full sm:w-auto" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+              <a href="tel:07427515915" className="w-full sm:w-auto" onClick={handlePhoneClick}>
                 <Button size="lg" className="bg-primary text-black hover:bg-primary/90 font-bold text-lg h-16 px-10 uppercase tracking-wide w-full shadow-[0_0_20px_rgba(255,255,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,0,0.5)] transition-all transform hover:-translate-y-1">
                   <Phone className="mr-2 h-6 w-6" />
                   Call Now

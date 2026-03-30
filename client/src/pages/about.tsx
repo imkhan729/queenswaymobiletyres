@@ -1,9 +1,10 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Award, Users, Shield, Clock } from "lucide-react";
 import mechanicImage from "@assets/generated_images/mechanic_checking_tyre_pressure.webp";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function About() {
   return (
@@ -90,7 +91,7 @@ export default function About() {
           <p className="text-lg mb-8 max-w-2xl mx-auto font-medium">
             Join thousands of satisfied customers who have switched to mobile tyre fitting.
           </p>
-          <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+          <a href="tel:07427515915" onClick={handlePhoneClick}>
             <Button size="lg" className="bg-black text-white hover:bg-gray-800 font-bold uppercase h-14 px-8 text-lg">
               <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
             </Button>

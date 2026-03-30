@@ -1,10 +1,11 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Fuel, AlertTriangle, Droplets, MapPin, Clock, Truck, CheckCircle, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/emergency_fuel_canister_pour.webp";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function EmergencyFuel() {
   const schema = {
@@ -51,7 +52,7 @@ export default function EmergencyFuel() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Call Now: 07427 515915
                   </Button>
@@ -174,7 +175,7 @@ export default function EmergencyFuel() {
               <p className="text-gray-400 mb-6 text-sm">
                 If you are in a dangerous location (live lane of a motorway), please call 999 first. For safe roadside locations, call us:
               </p>
-              <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+              <a href="tel:07427515915" onClick={handlePhoneClick}>
                 <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold h-14 uppercase text-lg animate-pulse">
                   <Phone className="mr-2 w-5 h-5" /> 07427 515915
                 </Button>

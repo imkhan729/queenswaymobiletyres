@@ -1,9 +1,10 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function NorthamptonLocation() {
     return (
@@ -47,7 +48,7 @@ export default function NorthamptonLocation() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                    <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                    <a href="tel:07427515915" onClick={handlePhoneClick}>
                         <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
                             <Phone className="mr-2 w-5 h-5" /> Call to Check Coverage
                         </Button>
@@ -60,7 +61,7 @@ export default function NorthamptonLocation() {
                 </div>
 
                 <p className="text-gray-500 text-sm">
-                    Not sure if we cover your area? Call us on <a href="tel:07427515915" className="text-primary font-bold" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>07427 515915</a> — if we can reach you safely within our quality standards, we will.
+                    Not sure if we cover your area? Call us on <a href="tel:07427515915" className="text-primary font-bold" onClick={handlePhoneClick}>07427 515915</a> — if we can reach you safely within our quality standards, we will.
                 </p>
             </div>
             <Footer />

@@ -1,4 +1,4 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Phone, CheckCircle, Wrench, ShieldCheck, HelpCircle, AlertTriangle, Map
 import heroImage from "@assets/generated_images/mechanic_repairing_a_puncture_on_a_roadside.webp";
 import tyreImage from "@assets/generated_images/close_up_of_car_tyre_tread.webp";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function PunctureRepair() {
   const schema = {
@@ -48,7 +49,7 @@ export default function PunctureRepair() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Repair My Tyre: 07427 515915
                   </Button>

@@ -1,10 +1,11 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Lock, Unlock, ShieldCheck, AlertTriangle, CheckCircle, Wrench, Truck, MapPin, ChevronRight } from "lucide-react";
 import heroImage from "@assets/generated_images/close_up_of_car_tyre_tread.webp"; // Reusing tread image as it fits generic tyre work
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function LockingNutRemoval() {
   const schema = {
@@ -48,7 +49,7 @@ export default function LockingNutRemoval() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Call Now: 07427 515915
                   </Button>
@@ -206,7 +207,7 @@ export default function LockingNutRemoval() {
                 <p className="text-white font-bold text-lg">From £80</p>
                 <p className="text-xs text-gray-500">For all 4 wheels</p>
               </div>
-              <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+              <a href="tel:07427515915" onClick={handlePhoneClick}>
                 <Button className="w-full bg-white text-black hover:bg-gray-200 font-bold uppercase">
                   Get A Quote
                 </Button>

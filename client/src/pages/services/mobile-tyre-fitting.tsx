@@ -1,4 +1,4 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Phone, CheckCircle, Clock, MapPin, Truck, ShieldCheck, Wrench, Star, Ch
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
 import vanInterior from "@assets/generated_images/mobile_tyre_fitting_van_interior.webp";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function MobileTyreFitting() {
   const schema = {
@@ -58,7 +59,7 @@ export default function MobileTyreFitting() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Book Now: 07427 515915
                   </Button>
@@ -253,7 +254,7 @@ export default function MobileTyreFitting() {
               <div className="bg-primary p-6 rounded-lg text-black text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2 uppercase">Need Tyres Today?</h3>
                 <p className="mb-6 font-medium">We often have same-day appointments available!</p>
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button className="w-full bg-black text-white hover:bg-gray-800 font-bold h-12 uppercase mb-3">
                     Call 07427 515915
                   </Button>

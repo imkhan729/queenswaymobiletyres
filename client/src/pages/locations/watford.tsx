@@ -1,10 +1,11 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Truck, ShieldCheck, Star, Wrench, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/mobile_tyre_fitting_van_in_action.webp";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function WatfordLocation() {
     const schema = {
@@ -47,7 +48,7 @@ export default function WatfordLocation() {
                         The leading mobile tyre service in Watford. We bring the garage to your driveway, workplace, or roadside 24 hours a day.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                        <a href="tel:07427515915" onClick={handlePhoneClick}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90">
                                 <Phone className="mr-2 w-5 h-5" /> Call 07427 515915
                             </Button>
@@ -225,7 +226,7 @@ export default function WatfordLocation() {
                         Get a quote instantly or call our emergency line. We are open 24 hours a day, 7 days a week.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                        <a href="tel:07427515915" onClick={handlePhoneClick}>
                             <Button size="lg" className="bg-primary text-black font-bold uppercase hover:bg-primary/90 w-full sm:w-auto">
                                 Call Now
                             </Button>

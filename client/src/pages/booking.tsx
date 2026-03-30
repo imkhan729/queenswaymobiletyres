@@ -1,4 +1,4 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function Booking() {
   const [date, setDate] = useState<Date>();
@@ -177,7 +178,7 @@ export default function Booking() {
               <p className="text-gray-300 text-sm mb-4">
                 For emergency call-outs or same-day service, it's faster to call us directly.
               </p>
-              <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+              <a href="tel:07427515915" onClick={handlePhoneClick}>
                 <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-black font-bold">
                   Call 07427 515915
                 </Button>

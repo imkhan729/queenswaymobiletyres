@@ -1,9 +1,10 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Truck, Wrench, Clock, Battery, Fuel, Settings, Lock, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function Locations() {
   // All locations within 40-mile radius of Hemel Hempstead base
@@ -282,7 +283,7 @@ export default function Locations() {
             We cover many surrounding villages and areas along the M1, M25, and A41. Give us a call — if we can reach you, we will.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+            <a href="tel:07427515915" onClick={handlePhoneClick}>
               <Button size="lg" className="bg-primary text-black font-bold uppercase">
                 <Phone className="mr-2 w-5 h-5" /> Call: 07427 515915
               </Button>

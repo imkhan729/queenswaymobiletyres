@@ -1,4 +1,4 @@
-import { SEO } from "@/components/seo";
+﻿import { SEO } from "@/components/seo";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { Phone, BatteryCharging, CheckCircle, AlertTriangle, Zap, Truck, MapPin,
 import heroImage from "@assets/generated_images/car_battery_replacement_at_home.webp";
 import batteryImage from "@assets/generated_images/car_battery_installation_close_up.webp";
 import { Link } from "wouter";
+import { handlePhoneClick } from "@/lib/usePhoneClick";
 
 export default function BatteryReplacement() {
   const schema = {
@@ -49,7 +50,7 @@ export default function BatteryReplacement() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex flex-col">
-                <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+                <a href="tel:07427515915" onClick={handlePhoneClick}>
                   <Button size="lg" className="bg-primary text-black font-bold uppercase h-14 px-8 hover:bg-primary/90">
                     <Phone className="mr-2 w-5 h-5" /> Call for Battery: 07427 515915
                   </Button>
@@ -201,7 +202,7 @@ export default function BatteryReplacement() {
               <p className="text-gray-400 mb-6 text-sm">
                 If your battery is just flat from leaving lights on, we offer a cheaper jump-start service to get you moving again.
               </p>
-              <a href="tel:07427515915" onClick={() => { if (typeof window !== 'undefined' && window['gtag']) { window['gtag']('event', 'conversion', { 'send_to': 'AW-17775313541/OJUeCK_Vh_wbEIWF95tC', 'transaction_id': '' }); } }}>
+              <a href="tel:07427515915" onClick={handlePhoneClick}>
                 <Button className="w-full bg-primary text-black hover:bg-primary/90 font-bold h-12 uppercase">
                   Call for Assistance
                 </Button>
